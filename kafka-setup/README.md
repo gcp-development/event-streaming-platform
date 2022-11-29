@@ -122,11 +122,13 @@ minikube tunnel
 
 ![image](https://user-images.githubusercontent.com/76512851/204564162-f6d59103-beda-43d1-9332-5edf56620a0f.png)
 
-```bash
-kubectl get deployment --namespace=event-streaming-platform
-```
+Open a new terminal window on Ubuntu (Ctrl+Alt+T) and execute
 
 ```bash
 kubectl apply -f 11_kafka-deployment.yml
+```
+
+```bash
+kubectl get deployment --namespace=event-streaming-platform
 ```
 
