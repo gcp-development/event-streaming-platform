@@ -132,3 +132,17 @@ kubectl apply -f 11_kafka-deployment.yml
 kubectl get deployment --namespace=event-streaming-platform
 ```
 
+![image](https://user-images.githubusercontent.com/76512851/204644836-37b993e9-db0d-415c-b9e9-ed3ae11fc203.png)
+
+```bash
+kubectl apply -f 12_kafka-service--nodeport.yml
+```
+
+```bash
+kubectl apply -f 13_kafka-service-load-balancer.yml
+```
+
+```bash
+kubectl get service --namespace=event-streaming-platform
+```
+
