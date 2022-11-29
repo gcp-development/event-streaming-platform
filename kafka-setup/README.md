@@ -114,7 +114,7 @@ kubectl get pv --namespace=event-streaming-platform
 
 LoadBalancer
 
-Open a terminal window on Ubuntu (Ctrl+Alt+T) and execute the [minikube tunnel](https://minikube.sigs.k8s.io/docs/handbook/accessing/#using-minikube-tunnel)
+Open a new terminal window on Ubuntu (Ctrl+Alt+T) and execute the [minikube tunnel](https://minikube.sigs.k8s.io/docs/handbook/accessing/#using-minikube-tunnel)
 
 ```bash
 minikube tunnel
