@@ -93,7 +93,9 @@ kubectl apply -f 9_kafka-pvc.yml
 kubectl apply -f 10_kafka-pv.yml
 ```
 
+```bash
 kubectl get pv --namespace=event-streaming-platform
+```
 
 ![image](https://user-images.githubusercontent.com/76512851/204557099-5721f1a5-0de6-4f5c-9fec-06c249facb9b.png)
 
