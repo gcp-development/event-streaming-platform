@@ -192,4 +192,12 @@ kafka-console-consumer --topic test-topic --from-beginning --bootstrap-server ka
 ![image](https://user-images.githubusercontent.com/76512851/204650853-951276c6-a154-4240-b728-3073e35cf36e.png)
 
 
+```bash
+sudo nano /etc/hosts
+```
+
+![image](https://user-images.githubusercontent.com/76512851/204654808-ace4689a-a9fd-4533-b457-89730afc3b2b.png)
+
+
+
 
