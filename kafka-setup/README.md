@@ -163,6 +163,10 @@ kubectl logs -f kafka-7dc9b87d74-pkmhk --namespace=event-streaming-platform
 
 ![image](https://user-images.githubusercontent.com/76512851/204647958-c8e88a17-c261-4d0f-9426-9f8e8e9dc218.png)
 
+
+![image](https://user-images.githubusercontent.com/76512851/204655281-ea98d4e3-881b-4da9-9163-149932fc2915.png)
+
+
 ```bash
 kubectl exec -it kafka-7dc9b87d74-pkmhk --namespace=event-streaming-platform -- /bin/bash
 ```
