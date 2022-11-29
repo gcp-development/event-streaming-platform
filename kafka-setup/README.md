@@ -150,3 +150,10 @@ kubectl get service --namespace=event-streaming-platform
 
 
 ![image](https://user-images.githubusercontent.com/76512851/204646717-b1c85ef1-af1b-44f5-a30c-9bfdc16e927e.png)
+
+```bash
+kubectl get pod --namespace=event-streaming-platform
+```
+
+![image](https://user-images.githubusercontent.com/76512851/204647594-c0e26cd1-040f-4c9b-a18d-158e5bd64802.png)
+
