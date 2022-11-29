@@ -167,8 +167,15 @@ kubectl logs -f kafka-7dc9b87d74-pkmhk --namespace=event-streaming-platform
 kubectl exec -it kafka-7dc9b87d74-pkmhk --namespace=event-streaming-platform -- /bin/bash
 ```
 
+```bash
+kafka-topics --create --bootstrap-server kafka:29092 --replication-factor 1 --partitions 1 --topic test-topic
+```
+
 ![image](https://user-images.githubusercontent.com/76512851/204649334-d8e8d31f-1558-455f-a938-29e13db348a6.png)
 
+```bash
+kafka-topics --describe --topic test-topic --bootstrap-server kafka:29092
+```
 
 ![image](https://user-images.githubusercontent.com/76512851/204649653-4e4bb02a-b3f4-4246-83e2-99d2d7834a31.png)
 
