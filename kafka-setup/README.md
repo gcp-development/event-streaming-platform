@@ -38,4 +38,19 @@ kubectl get service --namespace=event-streaming-platform
 ![image](https://user-images.githubusercontent.com/76512851/204545701-3b2d24a6-6ea0-4503-90c0-75a406590837.png)
 
 
+```bash
+kubectl apply -f 4_zookeeper-log-pvc.yml
+```
+
+```bash
+kubectl apply -f 5_zookeeper-log-pv.yml
+```
+
+```bash
+kubectl get pv --namespace=event-streaming-platform
+```
+
+![image](https://user-images.githubusercontent.com/76512851/204550916-9a71de36-ad25-4809-a25b-4d6f3faf7fbf.png)
+
+
 
