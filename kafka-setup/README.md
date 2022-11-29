@@ -157,3 +157,8 @@ kubectl get pod --namespace=event-streaming-platform
 
 ![image](https://user-images.githubusercontent.com/76512851/204647594-c0e26cd1-040f-4c9b-a18d-158e5bd64802.png)
 
+```bash
+kubectl logs -f kafka-7dc9b87d74-pkmhk --namespace=event-streaming-platform
+```
+![image](https://user-images.githubusercontent.com/76512851/204647958-c8e88a17-c261-4d0f-9426-9f8e8e9dc218.png)
+
