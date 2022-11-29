@@ -185,5 +185,11 @@ kafka-console-producer --broker-list kafka:29092 --topic test-topic --property p
 
 ![image](https://user-images.githubusercontent.com/76512851/204650040-8c77f6aa-242b-4401-96a1-738a8471d40d.png)
 
+```bash
+kafka-console-consumer --topic test-topic --from-beginning --bootstrap-server kafka:29092 --property parse.key=true --property key.separator=,
+```
+
+![image](https://user-images.githubusercontent.com/76512851/204650853-951276c6-a154-4240-b728-3073e35cf36e.png)
+
 
 
