@@ -105,3 +105,8 @@ LoadBalancer
 [using minikube tunnel](https://minikube.sigs.k8s.io/docs/handbook/accessing/#using-minikube-tunnel)
 
 
+```bash
+kubectl apply -f 11_kafka-deployment.yml
+```
+
+
