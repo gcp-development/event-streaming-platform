@@ -1,4 +1,4 @@
-Kaka setup
+# Kaka setup
 
 Prerequisites:
 <ul>
@@ -112,7 +112,7 @@ kubectl get pv --namespace=event-streaming-platform
 ![image](https://user-images.githubusercontent.com/76512851/204557099-5721f1a5-0de6-4f5c-9fec-06c249facb9b.png)
 
 
-LoadBalancer
+### LoadBalancer
 
 Open a new terminal window on Ubuntu (Ctrl+Alt+T) and execute the [minikube tunnel](https://minikube.sigs.k8s.io/docs/handbook/accessing/#using-minikube-tunnel)
 
@@ -203,5 +203,5 @@ sudo nano /etc/hosts
 ![image](https://user-images.githubusercontent.com/76512851/204654808-ace4689a-a9fd-4533-b457-89730afc3b2b.png)
 
 
-
+<hr>
 
