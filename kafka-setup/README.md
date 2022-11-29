@@ -100,6 +100,7 @@ kubectl get pv --namespace=event-streaming-platform
 ![image](https://user-images.githubusercontent.com/76512851/204557099-5721f1a5-0de6-4f5c-9fec-06c249facb9b.png)
 
 
+LoadBalancer
 
-
+(using minikube tunnel)[https://minikube.sigs.k8s.io/docs/handbook/accessing/#using-minikube-tunnel]
 
