@@ -80,3 +80,10 @@ kubectl get pods --namespace=event-streaming-platform
 ![image](https://user-images.githubusercontent.com/76512851/204553219-b13bdf04-add4-42bf-83e5-26287db4e404.png)
 
 
+```bash
+kubectl logs -f zookeeper-5f66859bc6-dr45b --namespace=event-streaming-platform
+```
+
+![image](https://user-images.githubusercontent.com/76512851/204554628-75d72094-0552-4259-aa9d-70b3ee4c87a7.png)
+
+
