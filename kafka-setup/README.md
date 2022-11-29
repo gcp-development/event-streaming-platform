@@ -17,3 +17,10 @@ kubectl get namespace
 
 ![image](https://user-images.githubusercontent.com/76512851/204543306-bcd63a57-1815-4fee-aff2-d4e3758c2d9c.png)
 
+```bash
+kubectl apply -f 2_platform-network.yml
+```
+
+```bash
+kubectl get NetworkPolicy --namespace=event-streaming-platform
+```
