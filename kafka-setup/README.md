@@ -62,4 +62,21 @@ kubectl apply -f 7_zookeeper-data-pv.yml
 
 ![image](https://user-images.githubusercontent.com/76512851/204551817-32a87c16-7920-4b1a-a400-ff57a38d0ac7.png)
 
+```bash
+kubectl apply -f 8_zookeeper-deployment.yml
+```
+
+```bash
+kubectl get deployment --namespace=event-streaming-platform
+```
+
+![image](https://user-images.githubusercontent.com/76512851/204552788-143d34b0-a7b7-430c-8269-02c8181ba294.png)
+
+
+```bash
+kubectl get pods --namespace=event-streaming-platform
+```
+
+![image](https://user-images.githubusercontent.com/76512851/204553219-b13bdf04-add4-42bf-83e5-26287db4e404.png)
+
 
