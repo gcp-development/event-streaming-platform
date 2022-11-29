@@ -120,7 +120,7 @@ Open a new terminal window on Ubuntu (Ctrl+Alt+T) and execute the [minikube tunn
 minikube tunnel
 ```
 
-![image](https://user-images.githubusercontent.com/76512851/204564162-f6d59103-beda-43d1-9332-5edf56620a0f.png)
+![image](https://user-images.githubusercontent.com/76512851/204644421-4b5c0dcf-2d42-45e5-b270-41fda55aa395.png)
 
 Open a new terminal window on Ubuntu (Ctrl+Alt+T) and execute
 
