@@ -79,11 +79,25 @@ kubectl get pods --namespace=event-streaming-platform
 
 ![image](https://user-images.githubusercontent.com/76512851/204553219-b13bdf04-add4-42bf-83e5-26287db4e404.png)
 
-
 ```bash
 kubectl logs -f zookeeper-5f66859bc6-dr45b --namespace=event-streaming-platform
 ```
 
 ![image](https://user-images.githubusercontent.com/76512851/204554628-75d72094-0552-4259-aa9d-70b3ee4c87a7.png)
+
+```bash
+kubectl apply -f 9_kafka-pvc.yml
+```
+
+```bash
+kubectl apply -f 10_kafka-pv.yml
+```
+
+kubectl get pv --namespace=event-streaming-platform
+
+![image](https://user-images.githubusercontent.com/76512851/204557099-5721f1a5-0de6-4f5c-9fec-06c249facb9b.png)
+
+
+
 
 
