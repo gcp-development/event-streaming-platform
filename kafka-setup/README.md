@@ -52,5 +52,14 @@ kubectl get pv --namespace=event-streaming-platform
 
 ![image](https://user-images.githubusercontent.com/76512851/204550916-9a71de36-ad25-4809-a25b-4d6f3faf7fbf.png)
 
+```bash
+kubectl apply -f 6_zookeeper-data-pvc.yml
+```
+
+```bash
+kubectl apply -f 7_zookeeper-data-pv.yml
+```
+
+![image](https://user-images.githubusercontent.com/76512851/204551817-32a87c16-7920-4b1a-a400-ff57a38d0ac7.png)
 
 
