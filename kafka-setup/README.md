@@ -43,7 +43,7 @@ kubectl apply -f 3_zookeeper-service.yml
 kubectl get service --namespace=event-streaming-platform
 ```
 
-![image](https://user-images.githubusercontent.com/76512851/204545701-3b2d24a6-6ea0-4503-90c0-75a406590837.png)
+![image](https://user-images.githubusercontent.com/76512851/204641753-a22bf4bc-7f03-480f-b9f4-dbd75defa5fb.png)
 
 
 ```bash
