@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    service: kafka-nodeport
+  name: kafka-nodeport
+  namespace: event-streaming-platform
+spec:
+  type: NodePort
+  selector:
+    service: kafka-nodeport
+  ports:
+    - name: internal
+      port: 29092
+      targetPort: 29092

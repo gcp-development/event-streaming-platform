@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    service: kafka-load-balancer
+  name: kafka-load-balancer
+  namespace: event-streaming-platform
+spec:
+  selector:
+    app: kafka-load-balancer
+  ports:
+    - port: 9092
+      targetPort: 9092
+  type: LoadBalancer

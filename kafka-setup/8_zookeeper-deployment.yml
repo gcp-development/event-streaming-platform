@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - env:
-            - name: TZ
+            #- name: TZ
             - name: ZOOKEEPER_CLIENT_PORT
               value: "2181"
             - name: ZOOKEEPER_DATA_DIR
