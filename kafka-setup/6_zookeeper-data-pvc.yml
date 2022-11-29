@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: zookeeper-data-pvc
+  namespace: event-streaming-platform
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: zookeeper-data-local-storage
+  resources:
+    requests:
+      storage: 5Gi
