@@ -16,7 +16,7 @@ minikube start --driver=docker --cpus 4 --memory 8192
 
 
 ```bash
-kubectl apply -f 0_namespace.yml
+kubectl apply -f 1_namespace.yml
 ```
 
 ```bash
