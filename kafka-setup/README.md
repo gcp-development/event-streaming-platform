@@ -146,3 +146,7 @@ kubectl apply -f 13_kafka-service-load-balancer.yml
 kubectl get service --namespace=event-streaming-platform
 ```
 
+![image](https://user-images.githubusercontent.com/76512851/204646433-2cd21921-a753-4326-b8eb-6f13fddb349d.png)
+
+
+![image](https://user-images.githubusercontent.com/76512851/204646717-b1c85ef1-af1b-44f5-a30c-9bfdc16e927e.png)
