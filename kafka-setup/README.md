@@ -179,6 +179,9 @@ kafka-topics --describe --topic test-topic --bootstrap-server kafka:29092
 
 ![image](https://user-images.githubusercontent.com/76512851/204649653-4e4bb02a-b3f4-4246-83e2-99d2d7834a31.png)
 
+```bash
+kafka-console-producer --broker-list kafka:29092 --topic test-topic --property parse.key=true --property key.separator=,
+```
 
 ![image](https://user-images.githubusercontent.com/76512851/204650040-8c77f6aa-242b-4401-96a1-738a8471d40d.png)
 
