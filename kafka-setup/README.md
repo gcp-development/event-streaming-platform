@@ -27,8 +27,15 @@ kubectl get NetworkPolicy --namespace=event-streaming-platform
 
 ![image](https://user-images.githubusercontent.com/76512851/204544713-23490950-612b-4967-9aa2-2b19078809dc.png)
 
-
 ```bash
 kubectl apply -f 3_zookeeper-service.yml
 ```
+
+```bash
+kubectl get service --namespace=event-streaming-platform
+```
+
+![image](https://user-images.githubusercontent.com/76512851/204545701-3b2d24a6-6ea0-4503-90c0-75a406590837.png)
+
+
 
