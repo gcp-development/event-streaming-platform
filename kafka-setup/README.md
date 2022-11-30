@@ -29,6 +29,8 @@ kubectl get namespace
 
 ![image](https://user-images.githubusercontent.com/76512851/204543306-bcd63a57-1815-4fee-aff2-d4e3758c2d9c.png)
 
+<hr>
+
 ### Network
 
 ```bash
@@ -40,6 +42,8 @@ kubectl get NetworkPolicy --namespace=event-streaming-platform
 ```
 
 ![image](https://user-images.githubusercontent.com/76512851/204544713-23490950-612b-4967-9aa2-2b19078809dc.png)
+
+<hr>
 
 ### Zookeeper
 
@@ -104,6 +108,8 @@ kubectl logs -f zookeeper-5f66859bc6-dr45b --namespace=event-streaming-platform
 
 ![image](https://user-images.githubusercontent.com/76512851/204554628-75d72094-0552-4259-aa9d-70b3ee4c87a7.png)
 
+<hr>
+
 ### Kafka
 
 ```bash
@@ -120,6 +126,7 @@ kubectl get pv --namespace=event-streaming-platform
 
 ![image](https://user-images.githubusercontent.com/76512851/204557099-5721f1a5-0de6-4f5c-9fec-06c249facb9b.png)
 
+<hr>
 
 ### LoadBalancer
 
@@ -204,7 +211,6 @@ kafka-console-consumer --topic test-topic --from-beginning --bootstrap-server ka
 
 ![image](https://user-images.githubusercontent.com/76512851/204650853-951276c6-a154-4240-b728-3073e35cf36e.png)
 
-### Hosts
 
 ```bash
 sudo nano /etc/hosts
