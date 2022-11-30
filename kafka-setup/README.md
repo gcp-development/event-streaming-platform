@@ -81,7 +81,7 @@ kubectl get service --namespace=event-streaming-platform
 
 ![image](https://user-images.githubusercontent.com/76512851/204641753-a22bf4bc-7f03-480f-b9f4-dbd75defa5fb.png)
 
-Create a [persistent volume claim]([https://kubernetes.io/docs/concepts/services-networking/service/](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)) for zookepper.
+Create a [persistent volume claim](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) for zookepper.
 
 ```bash
 kubectl apply -f 4_zookeeper-log-pvc.yml
