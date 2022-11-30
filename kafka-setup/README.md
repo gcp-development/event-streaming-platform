@@ -279,7 +279,7 @@ kafka-console-consumer --topic test-topic --from-beginning --bootstrap-server ka
 ![image](https://user-images.githubusercontent.com/76512851/204650853-951276c6-a154-4240-b728-3073e35cf36e.png)
 
 
-Add kafka to our /etc/hosts file in the host machine in order to connect connect their Kafka clients to the kafka broker via the load balancer created.
+Add kafka to our /etc/hosts file in the host machine in order to connect kafka clients to the kafka broker via the load balancer created.
 
 ```bash
 sudo nano /etc/hosts
