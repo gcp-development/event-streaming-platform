@@ -22,7 +22,6 @@ spec:
       containers:
         - name: kafka
           imagePullPolicy: IfNotPresent
-          # https://hub.docker.com/r/confluentinc/cp-zookeeper
           image: confluentinc/cp-kafka:latest
           ports:
             - containerPort: 29092

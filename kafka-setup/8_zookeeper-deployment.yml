@@ -19,7 +19,6 @@ spec:
     spec:
       containers:
         - env:
-            #- name: TZ
             - name: ZOOKEEPER_CLIENT_PORT
               value: "2181"
             - name: ZOOKEEPER_DATA_DIR
@@ -28,7 +27,6 @@ spec:
               value: "/data/zookeeper-log-pv"
             - name: ZOOKEEPER_SERVER_ID
               value: "1"
-          # https://hub.docker.com/r/confluentinc/cp-kafka/
           image: confluentinc/cp-zookeeper:latest
           name: zookeeper
           ports:
