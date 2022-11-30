@@ -9,7 +9,7 @@ Prerequisites:
   <li><a href="https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/" target="_blank">kubectl</a></li>
 </ul>
 
- Our local development environment is done using minikube to emulate a similar [kubernetes](https://kubernetes.io/) setup. Two images are used for this effect [confluent](https://www.confluent.io/) [cp-zookeeper/Community licensed](https://hub.docker.com/r/confluentinc/cp-zookeeper) and [cp-kafka//Community licensed](https://hub.docker.com/r/confluentinc/cp-kafka).
+ Our local development environment is done using minikube to emulate a similar [kubernetes](https://kubernetes.io/) setup. Two images are used for this effect [confluent](https://www.confluent.io/) [cp-zookeeper/Community licensed](https://hub.docker.com/r/confluentinc/cp-zookeeper) and [cp-kafka//Community licensed](https://hub.docker.com/r/confluentinc/cp-kafka). This setup is composed by a single node(Zookeeper) and a single broker cluster(Kafka) 
 
 ### Table of Contents
 <ul>
