@@ -185,7 +185,9 @@ Note:The minikube tunel is used to simulate a [cloud load balancer](https://kube
 
 ![image](https://user-images.githubusercontent.com/76512851/204644421-4b5c0dcf-2d42-45e5-b270-41fda55aa395.png)
 
-Open a new terminal window on Ubuntu (Ctrl+Alt+T) and execute
+Create the [deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) for the zookeeper.
+
+Open a new terminal window on Ubuntu (Ctrl+Alt+T) and execute.
 
 ```bash
 kubectl apply -f 11_kafka-deployment.yml
@@ -197,9 +199,13 @@ kubectl get deployment --namespace=event-streaming-platform
 
 ![image](https://user-images.githubusercontent.com/76512851/204644836-37b993e9-db0d-415c-b9e9-ed3ae11fc203.png)
 
+Create the [nodeport](https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport) for the kafka [service](https://kubernetes.io/docs/concepts/services-networking/service/).
+
 ```bash
-kubectl apply -f 12_kafka-service--nodeport.yml
+kubectl apply -f 12_kafka-service-nodeport.yml
 ```
+
+Create the [load balancer](https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer) for the kafka [service](https://kubernetes.io/docs/concepts/services-networking/service/).
 
 ```bash
 kubectl apply -f 13_kafka-service-load-balancer.yml
@@ -217,11 +223,14 @@ kubectl get service --namespace=event-streaming-platform
 
 ![image](https://user-images.githubusercontent.com/76512851/204655281-ea98d4e3-881b-4da9-9163-149932fc2915.png)
 
+Verify the [pod](https://kubernetes.io/docs/concepts/workloads/pods/) created.
+
 ```bash
 kubectl get pod --namespace=event-streaming-platform
 ```
 
 ![image](https://user-images.githubusercontent.com/76512851/204647594-c0e26cd1-040f-4c9b-a18d-158e5bd64802.png)
+
 
 ```bash
 kubectl logs -f kafka-7dc9b87d74-pkmhk --namespace=event-streaming-platform
