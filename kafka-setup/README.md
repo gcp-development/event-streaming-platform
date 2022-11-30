@@ -14,6 +14,7 @@ minikube start --driver=docker --cpus 4 --memory 8192
 
 ![image](https://user-images.githubusercontent.com/76512851/204541847-8ddcda76-3327-4886-856c-eb12d15bfef3.png)
 
+### Namespace
 
 ```bash
 kubectl apply -f 1_namespace.yml
@@ -25,6 +26,8 @@ kubectl get namespace
 
 ![image](https://user-images.githubusercontent.com/76512851/204543306-bcd63a57-1815-4fee-aff2-d4e3758c2d9c.png)
 
+### Network
+
 ```bash
 kubectl apply -f 2_platform-network.yml
 ```
@@ -35,6 +38,8 @@ kubectl get NetworkPolicy --namespace=event-streaming-platform
 
 ![image](https://user-images.githubusercontent.com/76512851/204544713-23490950-612b-4967-9aa2-2b19078809dc.png)
 
+### Zookeeper
+
 ```bash
 kubectl apply -f 3_zookeeper-service.yml
 ```
@@ -44,7 +49,6 @@ kubectl get service --namespace=event-streaming-platform
 ```
 
 ![image](https://user-images.githubusercontent.com/76512851/204641753-a22bf4bc-7f03-480f-b9f4-dbd75defa5fb.png)
-
 
 ```bash
 kubectl apply -f 4_zookeeper-log-pvc.yml
@@ -96,6 +100,8 @@ kubectl logs -f zookeeper-5f66859bc6-dr45b --namespace=event-streaming-platform
 ```
 
 ![image](https://user-images.githubusercontent.com/76512851/204554628-75d72094-0552-4259-aa9d-70b3ee4c87a7.png)
+
+### Kafka
 
 ```bash
 kubectl apply -f 9_kafka-pvc.yml
@@ -195,6 +201,7 @@ kafka-console-consumer --topic test-topic --from-beginning --bootstrap-server ka
 
 ![image](https://user-images.githubusercontent.com/76512851/204650853-951276c6-a154-4240-b728-3073e35cf36e.png)
 
+### Hosts
 
 ```bash
 sudo nano /etc/hosts
