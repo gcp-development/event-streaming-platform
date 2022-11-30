@@ -11,8 +11,6 @@ Prerequisites:
 
  Our local development environment is done using minikube to emulate a similar [kubernetes](https://kubernetes.io/) setup. Two images are used for this effect [confluent](https://www.confluent.io/) [cp-zookeeper/Community licensed](https://hub.docker.com/r/confluentinc/cp-zookeeper) and [cp-kafka//Community licensed](https://hub.docker.com/r/confluentinc/cp-kafka).
 
-Kubernetes setup on local development machine 
-
 ### Table of Contents
 <ul>
   <li><a href="https://github.com/gcp-development/event-streaming-platform/blob/main/kafka-setup/README.md#minikube" target="_blank">Minikube</a></li>
