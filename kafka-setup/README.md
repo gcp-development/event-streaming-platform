@@ -229,6 +229,7 @@ sudo nano /etc/hosts
 
 ![image](https://user-images.githubusercontent.com/76512851/204654808-ace4689a-a9fd-4533-b457-89730afc3b2b.png)
 
-
 <hr>
-
+References:<br>
+[Type Nodeport](https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport)<br>
+[Type LoadBalancer](https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer)<br>
