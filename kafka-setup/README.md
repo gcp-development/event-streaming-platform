@@ -1,6 +1,6 @@
 # Kaka setup
 
-Kafka is a distributed system consisting of servers and clients that communicate via a high-performance TCP network protocol. It can be deployed on bare-metal hardware, virtual machines, and containers in on-premise as well as cloud environments. 
+Kafka is a distributed event streaming platform. It’s distributed as Kafka can live on multiple machines. It’s called event streaming as it is processing events (i.e. messages) of something that happened (sent as a key/value pair). The messages are processed as a stream of events, which means that there is no schedule but they can be handled as they arrive.
 
 Prerequisites:
 <ul>
