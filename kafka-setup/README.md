@@ -7,6 +7,8 @@ Prerequisites:
   <li><a href="https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/" target="_blank">kubectl</a></li>
 </ul>
 
+This setup was done using two images from [confluent](https://www.confluent.io/) [cp-zookeeper](https://hub.docker.com/r/confluentinc/cp-zookeeper) and (cp-kafka)[https://hub.docker.com/r/confluentinc/cp-kafka].
+
 ### Table of Contents
 <ul>
   <li><a href="https://github.com/gcp-development/event-streaming-platform/blob/main/kafka-setup/README.md#minikube" target="_blank">Minikube</a></li>
