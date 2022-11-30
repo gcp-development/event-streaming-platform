@@ -233,8 +233,7 @@ sudo nano /etc/hosts
 
 <hr>
 References:<br>
-
-[Topic Compaction](https://developer.confluent.io/learn-kafka/architecture/compaction/)<br>
 [Apache Kafka](https://kafka.apache.org/documentation/#gettingStarted)<br>
+[Topic Compaction](https://developer.confluent.io/learn-kafka/architecture/compaction/)<br>
 [Type Nodeport](https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport)<br>
 [Type LoadBalancer](https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer)<br>
