@@ -7,6 +7,18 @@ Prerequisites:
   <li><a href="https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/" target="_blank">kubectl</a></li>
 </ul>
 
+### Table of Contents
+<ul>
+  <li>Minikube</li>
+  <li>Namespace</li>
+  <li>Network</li>
+  <li>Zookeeper</li>
+  <li>Kafka</li>
+  <li>LoadBalancer</li>
+</ul>
+
+<hr>
+
 ### Minikube
 
 ```bash
@@ -210,7 +222,6 @@ kafka-console-consumer --topic test-topic --from-beginning --bootstrap-server ka
 ```
 
 ![image](https://user-images.githubusercontent.com/76512851/204650853-951276c6-a154-4240-b728-3073e35cf36e.png)
-
 
 ```bash
 sudo nano /etc/hosts
