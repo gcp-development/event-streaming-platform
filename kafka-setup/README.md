@@ -7,7 +7,7 @@ Prerequisites:
   <li><a href="https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/" target="_blank">kubectl</a></li>
 </ul>
 
-This setup was done using two images from [confluent](https://www.confluent.io/) [cp-zookeeper](https://hub.docker.com/r/confluentinc/cp-zookeeper) and (cp-kafka)[https://hub.docker.com/r/confluentinc/cp-kafka].
+This setup was done using two images from [confluent](https://www.confluent.io/) [cp-zookeeper/Community licensed](https://hub.docker.com/r/confluentinc/cp-zookeeper) and [cp-kafka//Community licensed](https://hub.docker.com/r/confluentinc/cp-kafka).
 
 ### Table of Contents
 <ul>
