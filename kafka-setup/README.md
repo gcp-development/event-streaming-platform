@@ -10,11 +10,11 @@ Prerequisites:
 ### Table of Contents
 <ul>
   <li><a href="https://github.com/gcp-development/event-streaming-platform/blob/main/kafka-setup/README.md#minikube" target="_blank">Minikube</a></li>
-  <li>Namespace</li>
-  <li>Network</li>
-  <li>Zookeeper</li>
-  <li>Kafka</li>
-  <li>LoadBalancer</li>
+  <li><a href="" target="_blank">Namespace</a></li>
+  <li><a href="https://github.com/gcp-development/event-streaming-platform/blob/main/kafka-setup/README.md#network" target="_blank">Network</a></li>
+  <li><a href="https://github.com/gcp-development/event-streaming-platform/blob/main/kafka-setup/README.md#zookeeper" target="_blank">Zookeeper</a></li>
+  <li><a href="https://github.com/gcp-development/event-streaming-platform/blob/main/kafka-setup/README.md#kafka" target="_blank">Kafka</a></li>
+  <li><a href="https://github.com/gcp-development/event-streaming-platform/blob/main/kafka-setup/README.md#loadbalancer" target="_blank">LoadBalancer</a></li>
 </ul>
 
 <hr>
