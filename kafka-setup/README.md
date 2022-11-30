@@ -25,6 +25,8 @@ For this setup its assume that these software are installed and running:
 
 ### Minikube
 
+Start the minikube cluster.
+
 ```bash
 minikube start --driver=docker --cpus 4 --memory 8192
 ```
@@ -34,6 +36,8 @@ minikube start --driver=docker --cpus 4 --memory 8192
 <hr>
 
 ### Namespace
+
+Create a [namespace](https://kubernetes.io/docs/tasks/administer-cluster/namespaces-walkthrough/) for our resources.
 
 ```bash
 kubectl apply -f 1_namespace.yml
@@ -49,6 +53,8 @@ kubectl get namespace
 
 ### Network
 
+Create a [network](https://kubernetes.io/docs/concepts/services-networking/network-policies/) for our resources.
+
 ```bash
 kubectl apply -f 2_platform-network.yml
 ```
@@ -63,6 +69,8 @@ kubectl get NetworkPolicy --namespace=event-streaming-platform
 
 ### Zookeeper
 
+Create a [service](https://kubernetes.io/docs/concepts/services-networking/service/) for zookepper.
+
 ```bash
 kubectl apply -f 3_zookeeper-service.yml
 ```
@@ -72,6 +80,8 @@ kubectl get service --namespace=event-streaming-platform
 ```
 
 ![image](https://user-images.githubusercontent.com/76512851/204641753-a22bf4bc-7f03-480f-b9f4-dbd75defa5fb.png)
+
+Create a [persistent volume claim]([https://kubernetes.io/docs/concepts/services-networking/service/](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)) for zookepper.
 
 ```bash
 kubectl apply -f 4_zookeeper-log-pvc.yml
