@@ -233,5 +233,4 @@ sudo nano /etc/hosts
 References:<br>
 
 [Type Nodeport](https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport)<br>
-
 [Type LoadBalancer](https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer)<br>
