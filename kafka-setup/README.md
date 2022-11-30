@@ -231,6 +231,7 @@ kubectl get pod --namespace=event-streaming-platform
 
 ![image](https://user-images.githubusercontent.com/76512851/204647594-c0e26cd1-040f-4c9b-a18d-158e5bd64802.png)
 
+Verify the pod log.
 
 ```bash
 kubectl logs -f kafka-7dc9b87d74-pkmhk --namespace=event-streaming-platform
@@ -238,10 +239,13 @@ kubectl logs -f kafka-7dc9b87d74-pkmhk --namespace=event-streaming-platform
 
 ![image](https://user-images.githubusercontent.com/76512851/204647958-c8e88a17-c261-4d0f-9426-9f8e8e9dc218.png)
 
+Login into the pod.
 
 ```bash
 kubectl exec -it kafka-7dc9b87d74-pkmhk --namespace=event-streaming-platform -- /bin/bash
 ```
+
+Create a [compacted topic](https://developer.confluent.io/learn-kafka/architecture/compaction/).
 
 ```bash
 kafka-topics --create --bootstrap-server kafka:29092 --replication-factor 1 --partitions 1 --topic test-topic
@@ -249,11 +253,16 @@ kafka-topics --create --bootstrap-server kafka:29092 --replication-factor 1 --pa
 
 ![image](https://user-images.githubusercontent.com/76512851/204649334-d8e8d31f-1558-455f-a938-29e13db348a6.png)
 
+Verify the topic created.
+
 ```bash
 kafka-topics --describe --topic test-topic --bootstrap-server kafka:29092
 ```
 
 ![image](https://user-images.githubusercontent.com/76512851/204649653-4e4bb02a-b3f4-4246-83e2-99d2d7834a31.png)
+
+
+Create a couple of messages.
 
 ```bash
 kafka-console-producer --broker-list kafka:29092 --topic test-topic --property parse.key=true --property key.separator=,
@@ -261,11 +270,16 @@ kafka-console-producer --broker-list kafka:29092 --topic test-topic --property p
 
 ![image](https://user-images.githubusercontent.com/76512851/204650040-8c77f6aa-242b-4401-96a1-738a8471d40d.png)
 
+Read the topic messages.
+
 ```bash
 kafka-console-consumer --topic test-topic --from-beginning --bootstrap-server kafka:29092 --property parse.key=true --property key.separator=,
 ```
 
 ![image](https://user-images.githubusercontent.com/76512851/204650853-951276c6-a154-4240-b728-3073e35cf36e.png)
+
+
+Add kafka to our /etc/hosts file in the host machine in order to connect connect their Kafka clients to the kafka broker via the load balancer created.
 
 ```bash
 sudo nano /etc/hosts
@@ -277,6 +291,3 @@ sudo nano /etc/hosts
 References:<br>
 
 [Apache Kafka](https://kafka.apache.org/documentation/#gettingStarted)<br>
-[Topic Compaction](https://developer.confluent.io/learn-kafka/architecture/compaction/)<br>
-[Type Nodeport](https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport)<br>
-[Type LoadBalancer](https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer)<br>
