@@ -1,5 +1,7 @@
 # Kaka setup
 
+Kafka is a distributed system consisting of servers and clients that communicate via a high-performance TCP network protocol. It can be deployed on bare-metal hardware, virtual machines, and containers in on-premise as well as cloud environments. 
+
 Prerequisites:
 <ul>
   <li><a href="https://docs.docker.com/engine/install/ubuntu/" target="_blank">docker</a></li>
@@ -7,7 +9,9 @@ Prerequisites:
   <li><a href="https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/" target="_blank">kubectl</a></li>
 </ul>
 
-This setup was done using two images from [confluent](https://www.confluent.io/) [cp-zookeeper/Community licensed](https://hub.docker.com/r/confluentinc/cp-zookeeper) and [cp-kafka//Community licensed](https://hub.docker.com/r/confluentinc/cp-kafka).
+ Our local development environment is done using minikube to emulate a similar [kubernetes](https://kubernetes.io/) setup. Two images are used for this effect [confluent](https://www.confluent.io/) [cp-zookeeper/Community licensed](https://hub.docker.com/r/confluentinc/cp-zookeeper) and [cp-kafka//Community licensed](https://hub.docker.com/r/confluentinc/cp-kafka).
+
+Kubernetes setup on local development machine 
 
 ### Table of Contents
 <ul>
