@@ -2,7 +2,7 @@
 
 Kafka is a distributed event streaming platform. It’s distributed as Kafka can live on multiple machines. It’s called event streaming as it is processing events (i.e. messages) of something that happened (sent as a key/value pair). The messages are processed as a stream of events, which means that there is no schedule but they can be handled as they arrive.
 
-Prerequisites:
+For this setup its assume that these software are installed and running:
 <ul>
   <li><a href="https://docs.docker.com/engine/install/ubuntu/" target="_blank">docker</a></li>
   <li><a href="https://minikube.sigs.k8s.io/docs/start/" target="_blank">minikube</a></li>
