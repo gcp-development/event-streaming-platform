@@ -18,7 +18,7 @@ For this setup its assume that these software are installed and running:
   <li><a href="https://github.com/gcp-development/event-streaming-platform/blob/main/kafka-setup/README.md#network" target="_blank">Network</a></li>
   <li><a href="https://github.com/gcp-development/event-streaming-platform/blob/main/kafka-setup/README.md#zookeeper" target="_blank">Zookeeper</a></li>
   <li><a href="https://github.com/gcp-development/event-streaming-platform/blob/main/kafka-setup/README.md#kafka" target="_blank">Kafka</a></li>
-  <li><a href="https://github.com/gcp-development/event-streaming-platform/blob/main/kafka-setup/README.md#load-balancer" target="_blank">LoadBalancer</a></li>
+  <li><a href="https://github.com/gcp-development/event-streaming-platform/blob/main/kafka-setup/README.md#load-balancer" target="_blank">Load Balancer</a></li>
 </ul>
 
 <hr>
@@ -176,11 +176,12 @@ kubectl get pv --namespace=event-streaming-platform
 
 ### Load Balancer
 
-Open a new terminal window on Ubuntu (Ctrl+Alt+T) and execute the [minikube tunnel](https://minikube.sigs.k8s.io/docs/handbook/accessing/#using-minikube-tunnel). The minikube tunel is used to simulate a [cloud load balancer](https://kubernetes.io/docs/tasks/access-application-cluster/create-external-load-balancer/).
+Open a new terminal window on Ubuntu (Ctrl+Alt+T) and execute the [minikube tunnel](https://minikube.sigs.k8s.io/docs/handbook/accessing/#using-minikube-tunnel).
 
 ```bash
 minikube tunnel
 ```
+Note:The minikube tunel is used to simulate a [cloud load balancer](https://kubernetes.io/docs/tasks/access-application-cluster/create-external-load-balancer/).
 
 ![image](https://user-images.githubusercontent.com/76512851/204644421-4b5c0dcf-2d42-45e5-b270-41fda55aa395.png)
 
