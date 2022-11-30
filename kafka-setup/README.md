@@ -1,4 +1,4 @@
-Kaka setup
+# Kaka setup
 
 Prerequisites:
 <ul>
@@ -7,6 +7,21 @@ Prerequisites:
   <li><a href="https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/" target="_blank">kubectl</a></li>
 </ul>
 
+This setup was done using two images from [confluent](https://www.confluent.io/) [cp-zookeeper/Community licensed](https://hub.docker.com/r/confluentinc/cp-zookeeper) and [cp-kafka//Community licensed](https://hub.docker.com/r/confluentinc/cp-kafka).
+
+### Table of Contents
+<ul>
+  <li><a href="https://github.com/gcp-development/event-streaming-platform/blob/main/kafka-setup/README.md#minikube" target="_blank">Minikube</a></li>
+  <li><a href="" target="_blank">Namespace</a></li>
+  <li><a href="https://github.com/gcp-development/event-streaming-platform/blob/main/kafka-setup/README.md#network" target="_blank">Network</a></li>
+  <li><a href="https://github.com/gcp-development/event-streaming-platform/blob/main/kafka-setup/README.md#zookeeper" target="_blank">Zookeeper</a></li>
+  <li><a href="https://github.com/gcp-development/event-streaming-platform/blob/main/kafka-setup/README.md#kafka" target="_blank">Kafka</a></li>
+  <li><a href="https://github.com/gcp-development/event-streaming-platform/blob/main/kafka-setup/README.md#loadbalancer" target="_blank">LoadBalancer</a></li>
+</ul>
+
+<hr>
+
+### Minikube
 
 ```bash
 minikube start --driver=docker --cpus 4 --memory 8192
@@ -14,6 +29,9 @@ minikube start --driver=docker --cpus 4 --memory 8192
 
 ![image](https://user-images.githubusercontent.com/76512851/204541847-8ddcda76-3327-4886-856c-eb12d15bfef3.png)
 
+<hr>
+
+### Namespace
 
 ```bash
 kubectl apply -f 1_namespace.yml
@@ -25,6 +43,10 @@ kubectl get namespace
 
 ![image](https://user-images.githubusercontent.com/76512851/204543306-bcd63a57-1815-4fee-aff2-d4e3758c2d9c.png)
 
+<hr>
+
+### Network
+
 ```bash
 kubectl apply -f 2_platform-network.yml
 ```
@@ -35,6 +57,10 @@ kubectl get NetworkPolicy --namespace=event-streaming-platform
 
 ![image](https://user-images.githubusercontent.com/76512851/204544713-23490950-612b-4967-9aa2-2b19078809dc.png)
 
+<hr>
+
+### Zookeeper
+
 ```bash
 kubectl apply -f 3_zookeeper-service.yml
 ```
@@ -44,7 +70,6 @@ kubectl get service --namespace=event-streaming-platform
 ```
 
 ![image](https://user-images.githubusercontent.com/76512851/204641753-a22bf4bc-7f03-480f-b9f4-dbd75defa5fb.png)
-
 
 ```bash
 kubectl apply -f 4_zookeeper-log-pvc.yml
@@ -97,6 +122,10 @@ kubectl logs -f zookeeper-5f66859bc6-dr45b --namespace=event-streaming-platform
 
 ![image](https://user-images.githubusercontent.com/76512851/204554628-75d72094-0552-4259-aa9d-70b3ee4c87a7.png)
 
+<hr>
+
+### Kafka
+
 ```bash
 kubectl apply -f 9_kafka-pvc.yml
 ```
@@ -111,8 +140,9 @@ kubectl get pv --namespace=event-streaming-platform
 
 ![image](https://user-images.githubusercontent.com/76512851/204557099-5721f1a5-0de6-4f5c-9fec-06c249facb9b.png)
 
+<hr>
 
-LoadBalancer
+### LoadBalancer
 
 Open a new terminal window on Ubuntu (Ctrl+Alt+T) and execute the [minikube tunnel](https://minikube.sigs.k8s.io/docs/handbook/accessing/#using-minikube-tunnel)
 
@@ -151,6 +181,9 @@ kubectl get service --namespace=event-streaming-platform
 
 ![image](https://user-images.githubusercontent.com/76512851/204646717-b1c85ef1-af1b-44f5-a30c-9bfdc16e927e.png)
 
+
+![image](https://user-images.githubusercontent.com/76512851/204655281-ea98d4e3-881b-4da9-9163-149932fc2915.png)
+
 ```bash
 kubectl get pod --namespace=event-streaming-platform
 ```
@@ -162,6 +195,7 @@ kubectl logs -f kafka-7dc9b87d74-pkmhk --namespace=event-streaming-platform
 ```
 
 ![image](https://user-images.githubusercontent.com/76512851/204647958-c8e88a17-c261-4d0f-9426-9f8e8e9dc218.png)
+
 
 ```bash
 kubectl exec -it kafka-7dc9b87d74-pkmhk --namespace=event-streaming-platform -- /bin/bash
@@ -191,5 +225,16 @@ kafka-console-consumer --topic test-topic --from-beginning --bootstrap-server ka
 
 ![image](https://user-images.githubusercontent.com/76512851/204650853-951276c6-a154-4240-b728-3073e35cf36e.png)
 
+```bash
+sudo nano /etc/hosts
+```
 
+![image](https://user-images.githubusercontent.com/76512851/204654808-ace4689a-a9fd-4533-b457-89730afc3b2b.png)
 
+<hr>
+References:<br>
+
+[Apache Kafka](https://kafka.apache.org/documentation/#gettingStarted)<br>
+[Topic Compaction](https://developer.confluent.io/learn-kafka/architecture/compaction/)<br>
+[Type Nodeport](https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport)<br>
+[Type LoadBalancer](https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer)<br>
