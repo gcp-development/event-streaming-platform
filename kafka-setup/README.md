@@ -116,6 +116,8 @@ kubectl get pv --namespace=event-streaming-platform
 
 ![image](https://user-images.githubusercontent.com/76512851/204551817-32a87c16-7920-4b1a-a400-ff57a38d0ac7.png)
 
+Create the [deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) for the zookeeper.
+
 ```bash
 kubectl apply -f 8_zookeeper-deployment.yml
 ```
@@ -126,6 +128,7 @@ kubectl get deployment --namespace=event-streaming-platform
 
 ![image](https://user-images.githubusercontent.com/76512851/204552788-143d34b0-a7b7-430c-8269-02c8181ba294.png)
 
+Verify the [pod](https://kubernetes.io/docs/concepts/workloads/pods/) created.
 
 ```bash
 kubectl get pods --namespace=event-streaming-platform
