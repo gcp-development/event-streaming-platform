@@ -90,6 +90,7 @@ kubectl apply -f 4_zookeeper-log-pvc.yml
 ```
 
 PersistentVolume (PV)
+
 ```bash
 kubectl apply -f 5_zookeeper-log-pv.yml
 ```
@@ -102,10 +103,13 @@ kubectl get pv --namespace=event-streaming-platform
 Create a persistent [storage](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) for the zookepper data.
 
 PersistentVolumeClaim (PVC)
+
 ```bash
 kubectl apply -f 6_zookeeper-data-pvc.yml
 ```
+
 PersistentVolume (PV)
+
 ```bash
 kubectl apply -f 7_zookeeper-data-pv.yml
 ```
@@ -148,9 +152,15 @@ kubectl logs -f zookeeper-5f66859bc6-dr45b --namespace=event-streaming-platform
 
 ### Kafka
 
+Create a persistent [storage](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) for kafka.
+
+PersistentVolumeClaim (PVC)
+
 ```bash
 kubectl apply -f 9_kafka-pvc.yml
 ```
+
+PersistentVolume (PV)
 
 ```bash
 kubectl apply -f 10_kafka-pv.yml
@@ -164,9 +174,9 @@ kubectl get pv --namespace=event-streaming-platform
 
 <hr>
 
-### LoadBalancer
+### Load Balancer
 
-Open a new terminal window on Ubuntu (Ctrl+Alt+T) and execute the [minikube tunnel](https://minikube.sigs.k8s.io/docs/handbook/accessing/#using-minikube-tunnel)
+Open a new terminal window on Ubuntu (Ctrl+Alt+T) and execute the [minikube tunnel](https://minikube.sigs.k8s.io/docs/handbook/accessing/#using-minikube-tunnel). The minikube tunel is used to simulate a [cloud load balancer](https://kubernetes.io/docs/tasks/access-application-cluster/create-external-load-balancer/).
 
 ```bash
 minikube tunnel
