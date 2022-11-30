@@ -9,7 +9,7 @@ For this setup its assume that these software are installed and running:
   <li><a href="https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/" target="_blank">kubectl</a></li>
 </ul>
 
- Our local development environment is done using minikube to emulate a similar [kubernetes](https://kubernetes.io/) setup. Two images are used for this effect [confluent](https://www.confluent.io/) [cp-zookeeper/Community licensed](https://hub.docker.com/r/confluentinc/cp-zookeeper) and [cp-kafka//Community licensed](https://hub.docker.com/r/confluentinc/cp-kafka). This setup is composed by a single node [(Zookeeper)](https://zookeeper.apache.org/) and a single broker cluster [(Kafka)](https://kafka.apache.org/).
+ Our local development environment is done using minikube to emulate a similar [kubernetes](https://kubernetes.io/) setup. Two images are used for this effect [confluent](https://www.confluent.io/) [cp-zookeeper/Community licensed](https://hub.docker.com/r/confluentinc/cp-zookeeper) and [cp-kafka/Community licensed](https://hub.docker.com/r/confluentinc/cp-kafka). The image cp-zookeeper will create a single node [(Zookeeper)](https://zookeeper.apache.org/) and the image cp-kafka will create a single broker cluster [(Kafka)](https://kafka.apache.org/).
 
 ### Table of Contents
 <ul>
