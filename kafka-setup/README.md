@@ -9,7 +9,7 @@ Prerequisites:
 
 ### Table of Contents
 <ul>
-  <li>Minikube</li>
+  <li><a href="https://github.com/gcp-development/event-streaming-platform/blob/main/kafka-setup/README.md#minikube" target="_blank">Minikube</a></li>
   <li>Namespace</li>
   <li>Network</li>
   <li>Zookeeper</li>
