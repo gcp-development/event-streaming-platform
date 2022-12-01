@@ -13,3 +13,4 @@ Blockchain and Kafka are complementary, Kafka and the notion of blockchain share
 References:<br>
 
 [Event-Driven](https://martinfowler.com/articles/201701-event-driven.html)<br>
+[Benchmarking Apache Kafka: 2 Million Writes Per Second (On Three Cheap Machines)](https://engineering.linkedin.com/kafka/benchmarking-apache-kafka-2-million-writes-second-three-cheap-machines)<br>
