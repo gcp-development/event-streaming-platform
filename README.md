@@ -11,4 +11,5 @@ Blockchain and Kafka are complementary, Kafka and the notion of blockchain share
 
 <hr>
 References:<br>
+
 [Event-Driven](https://martinfowler.com/articles/201701-event-driven.html)<br>
