@@ -181,11 +181,11 @@ Open a new terminal window on Ubuntu (Ctrl+Alt+T) and execute the [minikube tunn
 ```bash
 minikube tunnel
 ```
-Note:The minikube tunel is used to simulate a [cloud load balancer](https://kubernetes.io/docs/tasks/access-application-cluster/create-external-load-balancer/) that sends traffic to the correct port on your cluster nodes in kubernetes.
+Note:The minikube tunel is used to simulate a [cloud load balancer](https://kubernetes.io/docs/tasks/access-application-cluster/create-external-load-balancer/) that sends traffic to the correct port on our pods in kubernetes.
 
 ![image](https://user-images.githubusercontent.com/76512851/204644421-4b5c0dcf-2d42-45e5-b270-41fda55aa395.png)
 
-Create the [deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) for the zookeeper.
+Create the [deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) for kafka.
 
 Open a new terminal window on Ubuntu (Ctrl+Alt+T) and execute.
 
