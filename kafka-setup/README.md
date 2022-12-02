@@ -317,6 +317,14 @@ Verify the pod.
 
 Verify the pod log.
 
+```bash
+ kubectl logs -f schema-registry-58b5c7b7f8-2sfmh --namespace=event-streaming-platform
+```
+
+![image](https://user-images.githubusercontent.com/76512851/205368725-d9c3d4c2-fb4e-4a37-b96d-c43a191ea10a.png)
+
+
+
 <hr>
 References:<br>
 
