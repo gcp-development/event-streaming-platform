@@ -245,6 +245,11 @@ Login into the pod.
 kubectl exec -it kafka-7dc9b87d74-pkmhk --namespace=event-streaming-platform -- /bin/bash
 ```
 
+![image](https://user-images.githubusercontent.com/76512851/205368541-27a4be8b-adda-489d-afe0-5fc508a0c85a.png)
+
+
+
+
 Create a [compacted topic](https://developer.confluent.io/learn-kafka/architecture/compaction/).
 
 ```bash
@@ -302,11 +307,15 @@ kubectl apply -f 14_schema-registry-service.yml
 kubectl apply -f 15_schema-registry-deployment.yml
 ```
 
+Verify the pod.
+
 ```bash
  kubectl get pod --namespace=event-streaming-platform
 ```
 
 ![image](https://user-images.githubusercontent.com/76512851/205367883-9421abfa-0451-4cae-8dd5-647513536e6b.png)
+
+Verify the pod log.
 
 <hr>
 References:<br>
