@@ -298,6 +298,15 @@ kubectl apply -f 14_schema-registry-service.yml
 ![image](https://user-images.githubusercontent.com/76512851/205366904-f905efe7-27e3-448b-ad10-afb94560d39b.png)
 
 
+```bash
+kubectl apply -f 15_schema-registry-deployment.yml
+```
+
+```bash
+ kubectl get pod --namespace=event-streaming-platform
+```
+
+![image](https://user-images.githubusercontent.com/76512851/205367883-9421abfa-0451-4cae-8dd5-647513536e6b.png)
 
 <hr>
 References:<br>
