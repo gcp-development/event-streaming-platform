@@ -287,6 +287,18 @@ sudo nano /etc/hosts
 
 ![image](https://user-images.githubusercontent.com/76512851/204654808-ace4689a-a9fd-4533-b457-89730afc3b2b.png)
 
+```bash
+kubectl apply -f 14_schema-registry-service.yml
+```
+
+```bash
+ kubectl get service --namespace=event-streaming-platform
+```
+
+![image](https://user-images.githubusercontent.com/76512851/205366904-f905efe7-27e3-448b-ad10-afb94560d39b.png)
+
+
+
 <hr>
 References:<br>
 
