@@ -247,9 +247,6 @@ kubectl exec -it kafka-7dc9b87d74-pkmhk --namespace=event-streaming-platform -- 
 
 ![image](https://user-images.githubusercontent.com/76512851/205368541-27a4be8b-adda-489d-afe0-5fc508a0c85a.png)
 
-
-
-
 Create a [compacted topic](https://developer.confluent.io/learn-kafka/architecture/compaction/).
 
 ```bash
@@ -292,9 +289,15 @@ sudo nano /etc/hosts
 
 ![image](https://user-images.githubusercontent.com/76512851/204654808-ace4689a-a9fd-4533-b457-89730afc3b2b.png)
 
+### Schema Registry
+
+Create a service for Schema Registry.
+
 ```bash
 kubectl apply -f 14_schema-registry-service.yml
 ```
+
+Verify the service.
 
 ```bash
  kubectl get service --namespace=event-streaming-platform
@@ -302,6 +305,7 @@ kubectl apply -f 14_schema-registry-service.yml
 
 ![image](https://user-images.githubusercontent.com/76512851/205366904-f905efe7-27e3-448b-ad10-afb94560d39b.png)
 
+Create the deployment for Schema Registry.
 
 ```bash
 kubectl apply -f 15_schema-registry-deployment.yml
@@ -322,8 +326,6 @@ Verify the pod log.
 ```
 
 ![image](https://user-images.githubusercontent.com/76512851/205368725-d9c3d4c2-fb4e-4a37-b96d-c43a191ea10a.png)
-
-
 
 <hr>
 References:<br>
