@@ -9,7 +9,7 @@ For this setup its assume that these software are installed and running:
   <li><a href="https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/" target="_blank">kubectl</a></li>
 </ul>
 
- Our local development environment is done using minikube to emulate a similar [kubernetes](https://kubernetes.io/) setup. Two images are used for this effect [confluent](https://www.confluent.io/) [cp-zookeeper/Community licensed](https://hub.docker.com/r/confluentinc/cp-zookeeper) and [cp-kafka/Community licensed](https://hub.docker.com/r/confluentinc/cp-kafka). The image cp-zookeeper will create a single node [(Zookeeper)](https://zookeeper.apache.org/) and the image cp-kafka will create a single broker cluster [(Kafka)](https://kafka.apache.org/).
+ Our local development environment is done using minikube to emulate a similar [kubernetes](https://kubernetes.io/) setup. Three images are used for this effect [confluent](https://www.confluent.io/) [cp-zookeeper/Community licensed](https://hub.docker.com/r/confluentinc/cp-zookeeper), [cp-kafka/Community licensed](https://hub.docker.com/r/confluentinc/cp-kafka) and [cp-schema-registry/Community licensed](https://hub.docker.com/r/confluentinc/cp-schema-registry). The image cp-zookeeper will create a single node [(Zookeeper)](https://zookeeper.apache.org/), the image cp-kafka will create a single broker cluster [(Kafka)](https://kafka.apache.org/) and the image cp-schema-registry will create the [schema registry](https://docs.confluent.io/platform/current/schema-registry/index.html#sr-overview).
 
 ### Table of Contents
 <ul>
@@ -19,6 +19,7 @@ For this setup its assume that these software are installed and running:
   <li><a href="https://github.com/gcp-development/event-streaming-platform/blob/main/kafka-setup/README.md#zookeeper" target="_blank">Zookeeper</a></li>
   <li><a href="https://github.com/gcp-development/event-streaming-platform/blob/main/kafka-setup/README.md#kafka" target="_blank">Kafka</a></li>
   <li><a href="https://github.com/gcp-development/event-streaming-platform/blob/main/kafka-setup/README.md#load-balancer" target="_blank">Load Balancer</a></li>
+  <li><a href="https://github.com/gcp-development/event-streaming-platform/blob/main/kafka-setup/README.md#schema-registry" target="_blank">Load Balancer</a></li>  
 </ul>
 
 <hr>
