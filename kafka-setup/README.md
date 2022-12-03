@@ -203,7 +203,8 @@ Verify the [pod](https://kubernetes.io/docs/concepts/workloads/pods/) created.
 kubectl get pod --namespace=event-streaming-platform
 ```
 
-![image](https://user-images.githubusercontent.com/76512851/204647594-c0e26cd1-040f-4c9b-a18d-158e5bd64802.png)
+![image](https://user-images.githubusercontent.com/76512851/205452572-b3cd7249-2965-42a7-abe1-4830cd4e3e80.png)
+
 
 Verify the pod log.
 
