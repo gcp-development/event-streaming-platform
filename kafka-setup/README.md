@@ -197,6 +197,35 @@ kubectl get deployment --namespace=event-streaming-platform
 
 ![image](https://user-images.githubusercontent.com/76512851/204644836-37b993e9-db0d-415c-b9e9-ed3ae11fc203.png)
 
+Verify the [pod](https://kubernetes.io/docs/concepts/workloads/pods/) created.
+
+```bash
+kubectl get pod --namespace=event-streaming-platform
+```
+
+![image](https://user-images.githubusercontent.com/76512851/204647594-c0e26cd1-040f-4c9b-a18d-158e5bd64802.png)
+
+Verify the pod log.
+
+```bash
+kubectl logs -f kafka-7dc9b87d74-pkmhk --namespace=event-streaming-platform
+```
+
+![image](https://user-images.githubusercontent.com/76512851/204647958-c8e88a17-c261-4d0f-9426-9f8e8e9dc218.png)
+
+Login into the pod.
+
+```bash
+kubectl exec -it kafka-7dc9b87d74-pkmhk --namespace=event-streaming-platform -- /bin/bash
+```
+
+![image](https://user-images.githubusercontent.com/76512851/205368541-27a4be8b-adda-489d-afe0-5fc508a0c85a.png)
+
+
+
+
+
+
 <hr>
 
 
@@ -239,29 +268,7 @@ Create the [load balancer](https://kubernetes.io/docs/concepts/services-networki
 
 ![image](https://user-images.githubusercontent.com/76512851/204655281-ea98d4e3-881b-4da9-9163-149932fc2915.png)
 
-Verify the [pod](https://kubernetes.io/docs/concepts/workloads/pods/) created.
 
-```bash
-kubectl get pod --namespace=event-streaming-platform
-```
-
-![image](https://user-images.githubusercontent.com/76512851/204647594-c0e26cd1-040f-4c9b-a18d-158e5bd64802.png)
-
-Verify the pod log.
-
-```bash
-kubectl logs -f kafka-7dc9b87d74-pkmhk --namespace=event-streaming-platform
-```
-
-![image](https://user-images.githubusercontent.com/76512851/204647958-c8e88a17-c261-4d0f-9426-9f8e8e9dc218.png)
-
-Login into the pod.
-
-```bash
-kubectl exec -it kafka-7dc9b87d74-pkmhk --namespace=event-streaming-platform -- /bin/bash
-```
-
-![image](https://user-images.githubusercontent.com/76512851/205368541-27a4be8b-adda-489d-afe0-5fc508a0c85a.png)
 
 Create a [compacted topic](https://developer.confluent.io/learn-kafka/architecture/compaction/).
 
