@@ -157,7 +157,22 @@ kubectl logs -f zookeeper-78897b79bc-sd7tf --namespace=event-streaming-platform
 kubectl apply -f 9_kafka-service.yml
 ```
 
+```bash
+kubectl get service --namespace=event-streaming-platform
+```
+
 ![image](https://user-images.githubusercontent.com/76512851/205451774-b9b9b58e-c385-4548-906a-83c23282a7b8.png)
+
+
+
+
+
+
+
+
+
+
+
 
 Create a persistent [storage](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) for kafka.
 
@@ -214,13 +229,6 @@ kubectl apply -f 9_kafka-service.yml
 
 Create the [load balancer](https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer) for the kafka [service](https://kubernetes.io/docs/concepts/services-networking/service/).
 
-```bash
-kubectl apply -f 10_kafka-service-load-balancer.yml
-```
-
-```bash
-kubectl get service --namespace=event-streaming-platform
-```
 
 ![image](https://user-images.githubusercontent.com/76512851/204646433-2cd21921-a753-4326-b8eb-6f13fddb349d.png)
 
