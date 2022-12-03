@@ -9,7 +9,7 @@ For this setup its assume that these software are installed and running:
   <li><a href="https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/" target="_blank">kubectl</a></li>
 </ul>
 
- Our local development environment is done using minikube to emulate a similar [kubernetes](https://kubernetes.io/) setup. Two images are used for this effect [confluent](https://www.confluent.io/) [cp-zookeeper/Community licensed](https://hub.docker.com/r/confluentinc/cp-zookeeper) and [cp-kafka/Community licensed](https://hub.docker.com/r/confluentinc/cp-kafka). The image cp-zookeeper will create a single node [(Zookeeper)](https://zookeeper.apache.org/) and the image cp-kafka will create a single broker cluster [(Kafka)](https://kafka.apache.org/).
+ Our local development environment is done using minikube to emulate a similar [kubernetes](https://kubernetes.io/) setup. Three images are used for this effect [confluent](https://www.confluent.io/) [cp-zookeeper/Community licensed](https://hub.docker.com/r/confluentinc/cp-zookeeper), [cp-kafka/Community licensed](https://hub.docker.com/r/confluentinc/cp-kafka) and [cp-schema-registry/Community licensed](https://hub.docker.com/r/confluentinc/cp-schema-registry). The image cp-zookeeper will create a single node [(Zookeeper)](https://zookeeper.apache.org/), the image cp-kafka will create a single broker cluster [(Kafka)](https://kafka.apache.org/) and the image cp-schema-registry will create the [schema registry](https://docs.confluent.io/platform/current/schema-registry/index.html#sr-overview).
 
 ### Table of Contents
 <ul>
@@ -19,6 +19,7 @@ For this setup its assume that these software are installed and running:
   <li><a href="https://github.com/gcp-development/event-streaming-platform/blob/main/kafka-setup/README.md#zookeeper" target="_blank">Zookeeper</a></li>
   <li><a href="https://github.com/gcp-development/event-streaming-platform/blob/main/kafka-setup/README.md#kafka" target="_blank">Kafka</a></li>
   <li><a href="https://github.com/gcp-development/event-streaming-platform/blob/main/kafka-setup/README.md#load-balancer" target="_blank">Load Balancer</a></li>
+  <li><a href="https://github.com/gcp-development/event-streaming-platform/blob/main/kafka-setup/README.md#schema-registry" target="_blank">Schema Registry</a></li>  
 </ul>
 
 <hr>
@@ -245,6 +246,8 @@ Login into the pod.
 kubectl exec -it kafka-7dc9b87d74-pkmhk --namespace=event-streaming-platform -- /bin/bash
 ```
 
+![image](https://user-images.githubusercontent.com/76512851/205368541-27a4be8b-adda-489d-afe0-5fc508a0c85a.png)
+
 Create a [compacted topic](https://developer.confluent.io/learn-kafka/architecture/compaction/).
 
 ```bash
@@ -286,6 +289,44 @@ sudo nano /etc/hosts
 ```
 
 ![image](https://user-images.githubusercontent.com/76512851/204654808-ace4689a-a9fd-4533-b457-89730afc3b2b.png)
+
+### Schema Registry
+
+Create a service for Schema Registry.
+
+```bash
+kubectl apply -f 14_schema-registry-service.yml
+```
+
+Verify the service.
+
+```bash
+ kubectl get service --namespace=event-streaming-platform
+```
+
+![image](https://user-images.githubusercontent.com/76512851/205366904-f905efe7-27e3-448b-ad10-afb94560d39b.png)
+
+Create the deployment for Schema Registry.
+
+```bash
+kubectl apply -f 15_schema-registry-deployment.yml
+```
+
+Verify the pod.
+
+```bash
+ kubectl get pod --namespace=event-streaming-platform
+```
+
+![image](https://user-images.githubusercontent.com/76512851/205367883-9421abfa-0451-4cae-8dd5-647513536e6b.png)
+
+Verify the pod log.
+
+```bash
+ kubectl logs -f schema-registry-58b5c7b7f8-2sfmh --namespace=event-streaming-platform
+```
+
+![image](https://user-images.githubusercontent.com/76512851/205368725-d9c3d4c2-fb4e-4a37-b96d-c43a191ea10a.png)
 
 <hr>
 References:<br>
