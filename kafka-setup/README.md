@@ -339,15 +339,18 @@ Verify the pod.
  kubectl get pod --namespace=event-streaming-platform
 ```
 
-![image](https://user-images.githubusercontent.com/76512851/205367883-9421abfa-0451-4cae-8dd5-647513536e6b.png)
+![image](https://user-images.githubusercontent.com/76512851/205455395-9fb1e767-2198-48ce-8ceb-ba3c1336d888.png)
 
 Verify the pod log.
 
 ```bash
- kubectl logs -f schema-registry-58b5c7b7f8-2sfmh --namespace=event-streaming-platform
+ kubectl logs -f schema-registry-6fd49bdfb4-klhzv --namespace=event-streaming-platform
 ```
 
-![image](https://user-images.githubusercontent.com/76512851/205368725-d9c3d4c2-fb4e-4a37-b96d-c43a191ea10a.png)
+![image](https://user-images.githubusercontent.com/76512851/205455253-8f71c3af-6a55-4f78-b5b6-afbc6b5c9bfa.png)
+
+Note:this can be found in the end of the log
+
 
 <hr>
 References:<br>
