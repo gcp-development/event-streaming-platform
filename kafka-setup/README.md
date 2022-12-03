@@ -296,7 +296,7 @@ Add kafka to our /etc/hosts file in the host machine in order to connect kafka c
 sudo nano /etc/hosts
 ```
 
-![image](https://user-images.githubusercontent.com/76512851/205455070-36b05f90-f834-420f-be33-acab95d17a0c.png)
+![image](https://user-images.githubusercontent.com/76512851/205455744-7833c8b1-1113-4e8f-ad43-e7a26601e0f1.png)
 
 ### Schema Registry
 
@@ -345,6 +345,13 @@ Note:this can be found in the end of the log
 ```bash
 kubectl apply -f 16_schema-registry-service-load-balancer.yml
 ```
+
+```bash
+kubectl get services --namespace=event-streaming-platform
+```
+
+![image](https://user-images.githubusercontent.com/76512851/205455766-29ddd41e-38b0-4515-818b-a4395b151016.png)
+
 
 <hr>
 References:<br>
