@@ -296,12 +296,12 @@ kubectl get svc --namespace=event-streaming-platform
 
 ![image](https://user-images.githubusercontent.com/76512851/204646717-b1c85ef1-af1b-44f5-a30c-9bfdc16e927e.png)
 
-![image](https://user-images.githubusercontent.com/76512851/204655281-ea98d4e3-881b-4da9-9163-149932fc2915.png)
 
+```bash
+ping 10.104.90.93
+```
 
-
-
-
+![image](https://user-images.githubusercontent.com/76512851/205454184-b82c9b58-7f34-4ba4-a243-ea1a5089c98a.png)
 
 Add kafka to our /etc/hosts file in the host machine in order to connect kafka clients to the kafka broker via the load balancer created.
 
