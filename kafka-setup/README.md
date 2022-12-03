@@ -255,9 +255,6 @@ kafka-console-consumer --topic test-topic --from-beginning --bootstrap-server ka
 
 ![image](https://user-images.githubusercontent.com/76512851/204650853-951276c6-a154-4240-b728-3073e35cf36e.png)
 
-
-
-
 <hr>
 
 
@@ -280,13 +277,11 @@ Open a new terminal window on Ubuntu (Ctrl+Alt+T) and execute the [minikube tunn
 ```bash
 minikube tunnel
 ```
-Note:The minikube tunel is used to simulate a [cloud load balancer](https://kubernetes.io/docs/tasks/access-application-cluster/create-external-load-balancer/) that sends traffic to the correct port on our pods in kubernetes.
+Note:The minikube tunel is used to simulate a [cloud load balancer](https://kubernetes.io/docs/tasks/access-application-cluster/create-external-load-balancer/) that sends traffic to the correct port on our pods in kubernetes. For [troubleshooting](https://minikube.sigs.k8s.io/docs/handbook/troubleshooting/) execute the "minikube start --alsologtostderr --v=2".
 
 ![image](https://user-images.githubusercontent.com/76512851/204644421-4b5c0dcf-2d42-45e5-b270-41fda55aa395.png)
 
 Open a new terminal window on Ubuntu (Ctrl+Alt+T) and execute.
-
-
 
 
 Create the [load balancer](https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer) for the kafka [service](https://kubernetes.io/docs/concepts/services-networking/service/).
