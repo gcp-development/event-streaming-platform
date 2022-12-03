@@ -309,7 +309,7 @@ Add kafka to our /etc/hosts file in the host machine in order to connect kafka c
 sudo nano /etc/hosts
 ```
 
-![image](https://user-images.githubusercontent.com/76512851/204654808-ace4689a-a9fd-4533-b457-89730afc3b2b.png)
+![image](https://user-images.githubusercontent.com/76512851/205455070-36b05f90-f834-420f-be33-acab95d17a0c.png)
 
 ### Schema Registry
 
