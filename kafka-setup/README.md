@@ -219,6 +219,9 @@ Login into the pod.
 ```bash
 kubectl exec -it kafka-7dc9b87d74-5cqkj --namespace=event-streaming-platform -- /bin/bash
 ```
+
+![image](https://user-images.githubusercontent.com/76512851/205452931-1716b2b6-8ee0-4aa0-8a7b-5163b15fae8f.png)
+
 Create a [compacted topic](https://developer.confluent.io/learn-kafka/architecture/compaction/).
 
 ```bash
