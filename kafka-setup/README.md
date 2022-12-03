@@ -144,7 +144,7 @@ kubectl get pods --namespace=event-streaming-platform
 Verify the pod log.
 
 ```bash
-kubectl logs -f zookeeper-5f66859bc6-dr45b --namespace=event-streaming-platform
+kubectl logs -f zookeeper-78897b79bc-sd7tf --namespace=event-streaming-platform
 ```
 
 ![image](https://user-images.githubusercontent.com/76512851/204554628-75d72094-0552-4259-aa9d-70b3ee4c87a7.png)
