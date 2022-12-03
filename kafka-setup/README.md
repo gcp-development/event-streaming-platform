@@ -18,8 +18,9 @@ For this setup its assume that these software are installed and running:
   <li><a href="https://github.com/gcp-development/event-streaming-platform/blob/main/kafka-setup/README.md#network" target="_blank">Network</a></li>
   <li><a href="https://github.com/gcp-development/event-streaming-platform/blob/main/kafka-setup/README.md#zookeeper" target="_blank">Zookeeper</a></li>
   <li><a href="https://github.com/gcp-development/event-streaming-platform/blob/main/kafka-setup/README.md#kafka" target="_blank">Kafka</a></li>
-  <li><a href="https://github.com/gcp-development/event-streaming-platform/blob/main/kafka-setup/README.md#load-balancerschema-registry-service" target="_blank">Load Balancer(schema-registry-service)</a></li>
-  <li><a href="https://github.com/gcp-development/event-streaming-platform/blob/main/kafka-setup/README.md#schema-registry" target="_blank">Schema Registry</a></li>  
+  <li><a href="https://github.com/gcp-development/event-streaming-platform/blob/main/kafka-setup/README.md#load-balancerkafka" target="_blank">Load Balancer(kafka)</a></li>
+  <li><a href="https://github.com/gcp-development/event-streaming-platform/blob/main/kafka-setup/README.md#schema-registry" target="_blank">Schema Registry</a></li>
+    <li><a href="https://github.com/gcp-development/event-streaming-platform/blob/main/kafka-setup/README.md#load-balancerschema-registry-service" target="_blank">Load Balancer(schema-registry-service)</a></li>
 </ul>
 
 <hr>
