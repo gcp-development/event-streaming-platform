@@ -165,29 +165,18 @@ kubectl get service --namespace=event-streaming-platform
 
 ![image](https://user-images.githubusercontent.com/76512851/205451774-b9b9b58e-c385-4548-906a-83c23282a7b8.png)
 
-
-
-
-
-
-
-
-
-
-
-
 Create a persistent [storage](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) for kafka.
 
 PersistentVolumeClaim (PVC)
 
 ```bash
-kubectl apply -f 11_kafka-pvc.yml
+kubectl apply -f 10_kafka-pvc.yml
 ```
 
 PersistentVolume (PV)
 
 ```bash
-kubectl apply -f 12_kafka-pv.yml
+kubectl apply -f 11_kafka-pv.yml
 ```
 
 ```bash
