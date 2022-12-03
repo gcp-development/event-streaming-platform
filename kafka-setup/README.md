@@ -316,7 +316,7 @@ sudo nano /etc/hosts
 Create a service for Schema Registry.
 
 ```bash
-kubectl apply -f 14_schema-registry-service.yml
+kubectl apply -f 14_schema-registry-service.yml 
 ```
 
 Verify the service.
@@ -325,7 +325,7 @@ Verify the service.
  kubectl get service --namespace=event-streaming-platform
 ```
 
-![image](https://user-images.githubusercontent.com/76512851/205366904-f905efe7-27e3-448b-ad10-afb94560d39b.png)
+![image](https://user-images.githubusercontent.com/76512851/205454831-7f1f2a17-169d-448f-9275-5bd4fc1a3260.png)
 
 Create the deployment for Schema Registry.
 
