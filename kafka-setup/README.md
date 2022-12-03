@@ -257,20 +257,7 @@ kafka-console-consumer --topic test-topic --from-beginning --bootstrap-server ka
 
 <hr>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-### Load Balancer
+### Load Balancer(kafka)
 
 Open a new terminal window on Ubuntu (Ctrl+Alt+T) and execute the [minikube tunnel](https://minikube.sigs.k8s.io/docs/handbook/accessing/#using-minikube-tunnel).
 
@@ -351,6 +338,13 @@ Verify the pod log.
 
 Note:this can be found in the end of the log
 
+<hr>
+
+### Load Balancer(schema-registry-service)
+
+```bash
+kubectl apply -f 16_schema-registry-service-load-balancer.yml
+```
 
 <hr>
 References:<br>
