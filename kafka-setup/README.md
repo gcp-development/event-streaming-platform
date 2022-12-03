@@ -268,7 +268,7 @@ Note:The minikube tunel is used to simulate a [cloud load balancer](https://kube
 
 ![image](https://user-images.githubusercontent.com/76512851/204644421-4b5c0dcf-2d42-45e5-b270-41fda55aa395.png)
 
-Open a new terminal window on Ubuntu (Ctrl+Alt+T) and execute.
+Open a new terminal window on Ubuntu (Ctrl+Alt+T) and execute.<br>
 Create the [load balancer](https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer) for the kafka [service](https://kubernetes.io/docs/concepts/services-networking/service/).
 
 ```bash
@@ -342,12 +342,14 @@ Note:this can be found in the end of the log
 
 ### Load Balancer(schema-registry-service)
 
+Create the load balancer for the schema-registry service.
+
 ```bash
 kubectl apply -f 16_schema-registry-service-load-balancer.yml
 ```
 
 ```bash
-kubectl get services --namespace=event-streaming-platform
+kubectl get svc --namespace=event-streaming-platform
 ```
 
 ![image](https://user-images.githubusercontent.com/76512851/205455766-29ddd41e-38b0-4515-818b-a4395b151016.png)
