@@ -153,6 +153,8 @@ kubectl logs -f zookeeper-78897b79bc-sd7tf --namespace=event-streaming-platform
 
 ### Kafka
 
+Create the kafka [service](https://kubernetes.io/docs/concepts/services-networking/service/).
+
 ```bash
 kubectl apply -f 9_kafka-service.yml
 ```
@@ -221,11 +223,6 @@ kubectl get deployment --namespace=event-streaming-platform
 
 ![image](https://user-images.githubusercontent.com/76512851/204644836-37b993e9-db0d-415c-b9e9-ed3ae11fc203.png)
 
-Create the [nodeport](https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport) for the kafka [service](https://kubernetes.io/docs/concepts/services-networking/service/).
-
-```bash
-kubectl apply -f 9_kafka-service.yml
-```
 
 Create the [load balancer](https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer) for the kafka [service](https://kubernetes.io/docs/concepts/services-networking/service/).
 
