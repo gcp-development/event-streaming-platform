@@ -282,15 +282,24 @@ Note:The minikube tunel is used to simulate a [cloud load balancer](https://kube
 ![image](https://user-images.githubusercontent.com/76512851/204644421-4b5c0dcf-2d42-45e5-b270-41fda55aa395.png)
 
 Open a new terminal window on Ubuntu (Ctrl+Alt+T) and execute.
-
-
 Create the [load balancer](https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer) for the kafka [service](https://kubernetes.io/docs/concepts/services-networking/service/).
 
+```bash
+kubectl apply -f 13_kafka-service-load-balancer.yml
+```
+
+```bash
+kubectl get svc --namespace=event-streaming-platform
+```
 
 ![image](https://user-images.githubusercontent.com/76512851/204646433-2cd21921-a753-4326-b8eb-6f13fddb349d.png)
 
 
 ![image](https://user-images.githubusercontent.com/76512851/204646717-b1c85ef1-af1b-44f5-a30c-9bfdc16e927e.png)
+
+
+![image](https://user-images.githubusercontent.com/76512851/205453952-0ff5b6f5-b5e7-4fa5-bda6-80dbdcd7e64c.png)
+
 
 
 ![image](https://user-images.githubusercontent.com/76512851/204655281-ea98d4e3-881b-4da9-9163-149932fc2915.png)
