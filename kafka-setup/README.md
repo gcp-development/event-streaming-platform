@@ -360,3 +360,4 @@ kubectl get svc --namespace=event-streaming-platform
 References:<br>
 
 [Apache Kafka](https://kafka.apache.org/documentation/#gettingStarted)<br>
+[Services, Load Balancing, and Networking](https://kubernetes.io/docs/concepts/services-networking/)<br>
