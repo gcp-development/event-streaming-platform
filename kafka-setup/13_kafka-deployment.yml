@@ -18,6 +18,8 @@ spec:
         network/platform-network: "true"
         service: kafka
     spec:
+      hostname: kafka
+      restartPolicy: Always
       enableServiceLinks: false
       containers:
         - name: kafka
@@ -55,8 +57,6 @@ spec:
           volumeMounts:
             - mountPath: /data/kafka-pv
               name: kafka-data
-      hostname: kafka
-      restartPolicy: Always
       volumes:
         - name: kafka-data
           persistentVolumeClaim:

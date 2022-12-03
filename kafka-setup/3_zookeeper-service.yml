@@ -6,9 +6,9 @@ metadata:
   name: zookeeper
   namespace: event-streaming-platform
 spec:
-  ports:
-    - name: "2181"
-      port: 2181
-      targetPort: 2181
   selector:
     service: zookeeper
+  ports:
+    - name: "default"
+      port: 2181
+      targetPort: 2181

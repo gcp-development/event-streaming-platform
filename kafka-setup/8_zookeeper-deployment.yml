@@ -17,6 +17,8 @@ spec:
         network/platform-network: "true"
         service: zookeeper
     spec:
+      hostname: zookeeper
+      restartPolicy: Always
       containers:
         - env:
             - name: ZOOKEEPER_CLIENT_PORT
@@ -37,8 +39,6 @@ spec:
               name: zookeeper-data
             - mountPath: /data/zookeeper-log-pv
               name: zookeeper-log
-      hostname: zookeeper
-      restartPolicy: Always
       volumes:
         - name: zookeeper-data
           persistentVolumeClaim:
