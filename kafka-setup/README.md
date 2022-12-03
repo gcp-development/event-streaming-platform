@@ -188,7 +188,7 @@ kubectl get pv --namespace=event-streaming-platform
 Create the [deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) for kafka.
 
 ```bash
-kubectl apply -f 13_kafka-deployment.yml
+kubectl apply -f 12_kafka-deployment.yml
 ```
 
 ```bash
@@ -198,6 +198,19 @@ kubectl get deployment --namespace=event-streaming-platform
 ![image](https://user-images.githubusercontent.com/76512851/204644836-37b993e9-db0d-415c-b9e9-ed3ae11fc203.png)
 
 <hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### Load Balancer
 
