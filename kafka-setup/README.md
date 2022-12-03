@@ -158,13 +158,13 @@ Create a persistent [storage](https://kubernetes.io/docs/concepts/storage/persis
 PersistentVolumeClaim (PVC)
 
 ```bash
-kubectl apply -f 11_kafka-pvc.yml
+kubectl apply -f 10_kafka-pvc.yml
 ```
 
 PersistentVolume (PV)
 
 ```bash
-kubectl apply -f 12_kafka-pv.yml
+kubectl apply -f 11_kafka-pv.yml
 ```
 
 ```bash
@@ -191,7 +191,7 @@ Create the [deployment](https://kubernetes.io/docs/concepts/workloads/controller
 Open a new terminal window on Ubuntu (Ctrl+Alt+T) and execute.
 
 ```bash
-kubectl apply -f 13_kafka-deployment.yml
+kubectl apply -f 12_kafka-deployment.yml
 ```
 
 ```bash
@@ -209,7 +209,7 @@ kubectl apply -f 9_kafka-service.yml
 Create the [load balancer](https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer) for the kafka [service](https://kubernetes.io/docs/concepts/services-networking/service/).
 
 ```bash
-kubectl apply -f 10_kafka-service-load-balancer.yml
+kubectl apply -f 13_kafka-service-load-balancer.yml
 ```
 
 ```bash

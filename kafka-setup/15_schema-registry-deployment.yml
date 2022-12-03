@@ -17,6 +17,8 @@ spec:
         network/platform-network: "true"
         service: schema-registry
     spec:
+      hostname: schema-registry
+      restartPolicy: Always
       enableServiceLinks: false
       containers:
         - env:
@@ -25,11 +27,9 @@ spec:
             - name: SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS
               value: "kafka:29092"
             - name: SCHEMA_REGISTRY_LISTENERS
-              value: "http://0.0.0.0:30081"
+              value: "http://0.0.0.0:8081"
           image: confluentinc/cp-schema-registry:latest
           name: schema-registry
           ports:
-            - containerPort: 30081
+            - containerPort: 8081
           resources: {}
-      hostname: schema-registry
-      restartPolicy: Always

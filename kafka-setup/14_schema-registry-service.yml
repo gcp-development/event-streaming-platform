@@ -9,8 +9,6 @@ spec:
   selector:
     service: schema-registry
   ports:
-    - port: 30081
-      name: outport
-      targetPort: 30081
-      nodePort: 30081
-  type: NodePort
+    - name: "default"
+      port: 8081
+      targetPort: 8081
