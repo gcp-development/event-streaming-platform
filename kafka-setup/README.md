@@ -153,6 +153,12 @@ kubectl logs -f zookeeper-78897b79bc-sd7tf --namespace=event-streaming-platform
 
 ### Kafka
 
+```bash
+kubectl apply -f 9_kafka-service.yml
+```
+
+![image](https://user-images.githubusercontent.com/76512851/205451774-b9b9b58e-c385-4548-906a-83c23282a7b8.png)
+
 Create a persistent [storage](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) for kafka.
 
 PersistentVolumeClaim (PVC)
