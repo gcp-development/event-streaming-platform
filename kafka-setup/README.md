@@ -185,6 +185,18 @@ kubectl get pv --namespace=event-streaming-platform
 
 ![image](https://user-images.githubusercontent.com/76512851/204557099-5721f1a5-0de6-4f5c-9fec-06c249facb9b.png)
 
+Create the [deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) for kafka.
+
+```bash
+kubectl apply -f 13_kafka-deployment.yml
+```
+
+```bash
+kubectl get deployment --namespace=event-streaming-platform
+```
+
+![image](https://user-images.githubusercontent.com/76512851/204644836-37b993e9-db0d-415c-b9e9-ed3ae11fc203.png)
+
 <hr>
 
 ### Load Balancer
@@ -198,19 +210,9 @@ Note:The minikube tunel is used to simulate a [cloud load balancer](https://kube
 
 ![image](https://user-images.githubusercontent.com/76512851/204644421-4b5c0dcf-2d42-45e5-b270-41fda55aa395.png)
 
-Create the [deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) for kafka.
-
 Open a new terminal window on Ubuntu (Ctrl+Alt+T) and execute.
 
-```bash
-kubectl apply -f 13_kafka-deployment.yml
-```
 
-```bash
-kubectl get deployment --namespace=event-streaming-platform
-```
-
-![image](https://user-images.githubusercontent.com/76512851/204644836-37b993e9-db0d-415c-b9e9-ed3ae11fc203.png)
 
 
 Create the [load balancer](https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer) for the kafka [service](https://kubernetes.io/docs/concepts/services-networking/service/).
