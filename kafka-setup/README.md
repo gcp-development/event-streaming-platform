@@ -80,7 +80,7 @@ kubectl apply -f 3_zookeeper-service.yml
 kubectl get service --namespace=event-streaming-platform
 ```
 
-![image](https://user-images.githubusercontent.com/76512851/204641753-a22bf4bc-7f03-480f-b9f4-dbd75defa5fb.png)
+![image](https://user-images.githubusercontent.com/76512851/205451368-a73d2188-e725-42ac-a8d6-564fbab12e25.png)
 
 Create a persistent [storage](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) for the zookepper log.
 
