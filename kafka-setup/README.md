@@ -352,6 +352,7 @@ kubectl get services --namespace=event-streaming-platform
 
 ![image](https://user-images.githubusercontent.com/76512851/205455766-29ddd41e-38b0-4515-818b-a4395b151016.png)
 
+![image](https://user-images.githubusercontent.com/76512851/205455823-5c4e0d05-ae3a-4845-80b3-7d8465d41e9e.png)
 
 <hr>
 References:<br>
