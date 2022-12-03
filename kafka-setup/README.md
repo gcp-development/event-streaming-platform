@@ -356,6 +356,8 @@ kubectl get svc --namespace=event-streaming-platform
 
 ![image](https://user-images.githubusercontent.com/76512851/205455823-5c4e0d05-ae3a-4845-80b3-7d8465d41e9e.png)
 
+![image](https://user-images.githubusercontent.com/76512851/205456398-dd5b255f-e289-40ab-b9f8-158dd9082b99.png)
+
 <hr>
 References:<br>
 
