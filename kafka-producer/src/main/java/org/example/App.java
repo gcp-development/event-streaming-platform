@@ -1,6 +1,7 @@
 package org.example;
 
 import io.confluent.kafka.serializers.json.KafkaJsonSchemaSerializer;
+import io.confluent.kafka.serializers.json.KafkaJsonSchemaSerializerConfig;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
@@ -23,13 +24,12 @@ public class App {
             pro.setProperty(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
             //pro.setProperty(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
             pro.setProperty(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, KafkaJsonSchemaSerializer.class.getName());
+            pro.setProperty(KafkaJsonSchemaSerializerConfig.SCHEMA_REGISTRY_URL_CONFIG,"http://Schema-registry:8081");
 
-            // Schema registry location.
-            //properties.setProperty(KafkaJsonSchemaSerializerConfig.SCHEMA_REGISTRY_URL_CONFIG,"http://localhost:8087");
             Transaction tx = new Transaction(10, "RECIPIENTQGefi2DMPTfTL5SLmv7DivfNa","SENDEReP5QGefi2DMPTfTL5SLmv7DivfNa");
 
             producer = new KafkaProducer<String, Transaction>(pro);
-            record = new ProducerRecord<String, Transaction>(TOPIC_NAME, "2", tx);
+            record = new ProducerRecord<String, Transaction>(TOPIC_NAME, "3", tx);
             producer.send(record);
             producer.flush();
             producer.close();
