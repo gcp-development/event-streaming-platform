@@ -7,7 +7,7 @@ Blockchain and Kafka are complementary, Kafka and the notion of blockchain share
 <hr>
 
 
-![image](https://user-images.githubusercontent.com/76512851/204851065-fc43bc57-2395-4570-9627-18a34926fa25.png)
+![image](https://user-images.githubusercontent.com/76512851/205588108-4e82ce10-cdb3-49c0-a417-c3fa5201b476.png)
 
 <hr>
 References:<br>
