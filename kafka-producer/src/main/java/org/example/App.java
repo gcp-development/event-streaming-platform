@@ -12,11 +12,13 @@ import java.util.Properties;
 
 public class App {
     public static void main(String[] args) {
-        final String BOOTSTRAP_SERVERS = "10.97.176.6:9092";
+        final String BOOTSTRAP_SERVERS = "10.104.90.93:9092";
         final String TOPIC_NAME = "test-topic";
         Properties pro;
-        KafkaProducer<String, Transaction> producer= null;
+        KafkaProducer<String, Transaction> producer = null;
         ProducerRecord<String, Transaction> record;
+//        KafkaProducer<String, String> producer = null;
+//        ProducerRecord<String, String> record;
 
         try {
             pro = new Properties();
@@ -29,20 +31,37 @@ public class App {
             Transaction tx = new Transaction(10, "RECIPIENTQGefi2DMPTfTL5SLmv7DivfNa","SENDEReP5QGefi2DMPTfTL5SLmv7DivfNa");
 
             producer = new KafkaProducer<String, Transaction>(pro);
-            record = new ProducerRecord<String, Transaction>(TOPIC_NAME, "3", tx);
-            producer.send(record);
+            record = new ProducerRecord<String, Transaction>(TOPIC_NAME, "18", tx);
+            producer.send(record, (recordMetadata, e) -> {
+                if (e == null) {
+                    System.out.println("Success!" );
+                    System.out.println(recordMetadata.toString());
+                } else {
+                    System.out.println("Error..!!!");
+                            e.printStackTrace();
+                }
+            });
             producer.flush();
             producer.close();
+/*
 
-            /*
-            for (int i = 31; i <= 60; i++) {
+            for (int i = 1; i <= 10; i++) {
                 producer = new KafkaProducer<String, String>(pro);
                 record = new ProducerRecord<String, String>(TOPIC_NAME, Integer.toString(i), "test" + i);
-                producer.send(record);
+                producer.send(record, (recordMetadata, e) -> {
+                    if (e == null) {
+                        System.out.println("Success!");
+                        System.out.println(recordMetadata.toString());
+                    } else {
+                        System.out.println("Error..!!!");
+                        e.printStackTrace();
+                    }
+                });
                 producer.flush();
                 producer.close();
-            }*/
-            System.out.println("Message batch Sent...!!!");
+            }
+
+ */
         } catch (Exception e) {
             e.printStackTrace();
         } finally {

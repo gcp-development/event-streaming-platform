@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonRootName;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.List;
 
 @JsonRootName(value = "Transaction")
@@ -14,6 +15,12 @@ public class Transaction {
     private String recipient;
     @JsonProperty("Sender")
     private String sender;
+
+    public Transaction() {
+        this.amount = -1;
+        this.recipient = new String();
+        this.sender = new String();
+    }
 
     public Transaction(int amount, String recipient, String sender) {
         this.amount = amount;

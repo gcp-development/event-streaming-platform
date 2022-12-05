@@ -1,5 +1,6 @@
 package org.blockchain;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.sql.Timestamp;
 import com.fasterxml.jackson.annotation.JsonRootName;
@@ -17,6 +18,14 @@ public class Block {
     private int proof;
     @JsonProperty("PreviousHash")
     private String previousHash;
+
+    public Block() {
+        this.index = -1;
+        this.timestamp =  new Timestamp(System.currentTimeMillis());;
+        this.transactions = new ArrayList<Transaction>();
+        this.proof = -1;
+        this.previousHash = new String();
+    }
 
     public Block(int index, Timestamp timestamp, List<Transaction> transactions, int proof, String previousHash) {
         this.index = index;
