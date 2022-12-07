@@ -1,5 +1,8 @@
 package org.blockchain;
 
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.List;
 import java.sql.Timestamp;
@@ -21,7 +24,8 @@ public class Block {
 
     public Block() {
         this.index = -1;
-        this.timestamp =  new Timestamp(System.currentTimeMillis());;
+        this.timestamp = new Timestamp(System.currentTimeMillis());
+        ;
         this.transactions = new ArrayList<Transaction>();
         this.proof = -1;
         this.previousHash = new String();
@@ -73,5 +77,21 @@ public class Block {
 
     public void setPreviousHash(String previousHash) {
         this.previousHash = previousHash;
+    }
+
+    public String getHash() throws NoSuchAlgorithmException {
+        String word;
+        MessageDigest md;
+        byte[] wordConvertToBytes;
+        StringBuilder hash;
+
+        word = Integer.toString(index) + timestamp.toString() + transactions.toString() + Integer.toString(proof) + previousHash;
+        md = MessageDigest.getInstance("SHA3-256");
+        wordConvertToBytes = md.digest(word.getBytes(StandardCharsets.UTF_8));
+        hash = new StringBuilder();
+        for (byte c : wordConvertToBytes) {
+            hash.append(String.format("%02x", c));
+        }
+        return hash.toString();
     }
 }
