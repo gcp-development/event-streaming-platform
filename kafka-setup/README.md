@@ -228,6 +228,8 @@ Create a [compacted topic](https://developer.confluent.io/learn-kafka/architectu
 ```bash
 kafka-topics --create --bootstrap-server kafka:29092 --replication-factor 1 --partitions 1 --topic test-topic
 ```
+Note:We can use the "kafka-topics --bootstrap-server=kafka:9092 --list" command to list all topics.
+
 
 ![image](https://user-images.githubusercontent.com/76512851/204649334-d8e8d31f-1558-455f-a938-29e13db348a6.png)
 
