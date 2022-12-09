@@ -28,11 +28,14 @@ By integrating these technologies, this PoC creates a platform for demonstrate b
 
 Fundamentally, the data stored in a blockchain must have the following characteristics:
 <ul>
- <li>Immutable</li>
- <li>Unhackable</li>
- <li>Persistent</li>
- <li>Distributed</li>
+ <li>No Central Authority</li>
+ <li>Verifiability and Auditability</li>
+ <li>Disintermediation</li>
+ <li>Confidentiality and Integrity</li>
+ <li>Robustness</li>
 </ul>
+
+A blockchain is a decentralized ledger of all transactions across a peer-to-peer network
 
 ![image](https://user-images.githubusercontent.com/76512851/206766875-be6a8c1b-f274-4aa9-8389-78747e4fe1f9.png)
 
