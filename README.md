@@ -7,10 +7,15 @@ Blockchain and Kafka are complementary, Kafka and the notion of blockchain share
 <hr>
 ## Table of Contents<br>
 <ul>
+<li><a href="" target="_self">Proof of Concept(Kafka)</a></li>
 <li><a href="https://github.com/gcp-development/event-streaming-platform#consensus-mechanism" target="_self">Consensus Mechanism</a></li>
-<li><a href="" target="_self"></a></li>
+
 </ul>
 <hr>
+
+### Proof of Concept(Kafka)
+
+Apache Kafka is frequently deployed on the [Kubernetes](https://kubernetes.io/) management system, which is used to automate deployment, scaling, and operation of containers across clusters of hosts. Cloud-native applications are independent, loosely coupled, and distributed services that deliver high scalability via the cloud. In the same way, the event-driven applications built on Kafka are loosely coupled and designed to scale across a distributed hybrid cloud environment.
 
 ![image](https://user-images.githubusercontent.com/76512851/205594178-5de3849d-9e34-4920-ba2b-4e2326469168.png)
 
