@@ -39,6 +39,9 @@ A blockchain is a decentralized ledger of all transactions across a peer-to-peer
 
 ![image](https://user-images.githubusercontent.com/76512851/206766875-be6a8c1b-f274-4aa9-8389-78747e4fe1f9.png)
 
+
+![image](https://user-images.githubusercontent.com/76512851/206777038-2df7f07e-3698-4c0b-8d2d-8b421ef6b194.png)
+
 <hr>
 
 ### Consensus Mechanism
