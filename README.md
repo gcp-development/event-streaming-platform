@@ -5,7 +5,12 @@
 Blockchain and Kafka are complementary, Kafka and the notion of blockchain share many traits, such as immutability, replication, distribution, and the decoupling of applications. This complementary relationship means that we are able to extend the functionality of a given DLT(distributed ledger technology) through sidechain or off-chain activities, such as analytics, integrations with traditional enterprise systems, or even the integration of certain chains and ledgers. 
  
 <hr>
-
+## Table of Contents<br>
+<ul>
+<li><a href="https://github.com/gcp-development/event-streaming-platform#consensus-mechanism" target="_self">Consensus Mechanism</a></li>
+<li><a href="" target="_self"></a></li>
+</ul>
+<hr>
 
 ![image](https://user-images.githubusercontent.com/76512851/205594178-5de3849d-9e34-4920-ba2b-4e2326469168.png)
 
