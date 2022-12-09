@@ -9,6 +9,7 @@ Blockchain and Kafka are complementary, Kafka and the notion of blockchain share
 ## Table of Contents<br>
 <ul>
 <li><a href="https://github.com/gcp-development/event-streaming-platform/blob/main/README.md#proof-of-conceptkafka" target="_self">Kafka and Kubernetes</a></li>
+<li><a href="https://github.com/gcp-development/event-streaming-platform/blob/main/README.md#blockchain" target="_self">Blockchain</a></li> 
 <li><a href="https://github.com/gcp-development/event-streaming-platform#consensus-mechanism" target="_self">Consensus Mechanism</a></li>
 </ul>
 <hr>
