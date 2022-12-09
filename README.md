@@ -28,3 +28,4 @@ References:<br>
 
 [Event-Driven](https://martinfowler.com/articles/201701-event-driven.html)<br>
 [Benchmarking Apache Kafka: 2 Million Writes Per Second (On Three Cheap Machines)](https://engineering.linkedin.com/kafka/benchmarking-apache-kafka-2-million-writes-second-three-cheap-machines)<br>
+[Peercoin Introduction to Proof-of-Stake](https://www.peercoin.net/docs/proof-of-stake)<br>
