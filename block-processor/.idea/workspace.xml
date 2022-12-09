@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eba02fce-ea02-4a51-a4df-cd7731ff2ca3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../basic-blockchain/src/main/java/org/blockchain/Block.java" beforeDir="false" afterPath="$PROJECT_DIR$/../basic-blockchain/src/main/java/org/blockchain/Block.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../basic-blockchain/src/test/java/org/blockchain/BlockTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../basic-blockchain/src/test/java/org/blockchain/BlockTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../basic-blockchain/src/test/java/org/blockchain/ValidatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../basic-blockchain/src/test/java/org/blockchain/ValidatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../basic-blockchain/target/basic-blockchain-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../basic-blockchain/target/basic-blockchain-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../basic-blockchain/target/classes/org/blockchain/Block.class" beforeDir="false" afterPath="$PROJECT_DIR$/../basic-blockchain/target/classes/org/blockchain/Block.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../basic-blockchain/target/surefire-reports/TEST-org.blockchain.BlockTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../basic-blockchain/target/surefire-reports/TEST-org.blockchain.BlockTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../basic-blockchain/target/surefire-reports/TEST-org.blockchain.TransactionTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../basic-blockchain/target/surefire-reports/TEST-org.blockchain.TransactionTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../basic-blockchain/target/surefire-reports/TEST-org.blockchain.ValidatorTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../basic-blockchain/target/surefire-reports/TEST-org.blockchain.ValidatorTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../basic-blockchain/target/surefire-reports/org.blockchain.BlockTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../basic-blockchain/target/surefire-reports/org.blockchain.BlockTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../basic-blockchain/target/surefire-reports/org.blockchain.TransactionTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../basic-blockchain/target/surefire-reports/org.blockchain.TransactionTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../basic-blockchain/target/surefire-reports/org.blockchain.ValidatorTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../basic-blockchain/target/surefire-reports/org.blockchain.ValidatorTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../basic-blockchain/target/test-classes/org/blockchain/BlockTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../basic-blockchain/target/test-classes/org/blockchain/BlockTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../basic-blockchain/target/test-classes/org/blockchain/ValidatorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../basic-blockchain/target/test-classes/org/blockchain/ValidatorTest.class" afterDir="false" />
-    </list>
+    <list default="true" id="eba02fce-ea02-4a51-a4df-cd7731ff2ca3" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
