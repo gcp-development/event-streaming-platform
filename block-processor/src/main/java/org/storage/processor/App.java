@@ -16,9 +16,6 @@ import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.common.serialization.StringSerializer;
 import org.blockchain.Block;
 import org.blockchain.Transaction;
-
-import java.nio.charset.StandardCharsets;
-import java.security.MessageDigest;
 import java.sql.Timestamp;
 import java.time.Duration;
 import java.util.*;
@@ -44,16 +41,7 @@ public class App {
         KafkaProducer<String, Block> producer = null;
         ProducerRecord<String, Block> recordBlock;
         String blockhash;
-        /*
-         def genesis_block(self):
-        return {
-            'index': 1,
-            'timestamp': time(),
-            'transactions': [],
-            'proof': 100,
-            'previous_hash': 1,
-        }
-         */
+        
         try {
             //transactions
             pro = new Properties();
@@ -83,8 +71,9 @@ public class App {
             //consumer.seekToEnd(Collections.singletonList(tp));
             //consumer.commitSync() ;
             //consumer.seek(tp,11);
+
             index = 0;
-            blockhash = "Genesis block";
+            blockhash = "Genesis Block";
             txs = new ArrayList<>();
             while (true) {
                 records = consumer.poll(Duration.ofMillis(100));
@@ -117,13 +106,7 @@ public class App {
                         producer.close();
                         index++;
                         txs = new ArrayList<>();
-                        MessageDigest md = MessageDigest.getInstance("SHA3-256");
-                        byte[] result = md.digest(bk.toString().getBytes(StandardCharsets.UTF_8));
-                        StringBuilder sb = new StringBuilder();
-                        for (byte b : result) {
-                            sb.append(String.format("%02x", b));
-                        }
-                        blockhash = sb.toString();
+                        blockhash = bk.getHash();
                     }
                 }
             }

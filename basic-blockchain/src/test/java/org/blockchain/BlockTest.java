@@ -32,7 +32,7 @@ public class BlockTest extends TestCase {
         tx.add(new Transaction(30, "3A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa", "6A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa"));
         bk = new Block(index, timestamp, tx, proof, previousHash);
 
-        word = Integer.toString(index) + timestamp.toString() + tx.toString() + Integer.toString(proof) + previousHash;
+        word = Integer.toString(index) + timestamp.toString() + Integer.toString(60) + Integer.toString(proof) + previousHash;
         md = MessageDigest.getInstance("SHA3-256");
         wordConvertToBytes = md.digest(word.getBytes(StandardCharsets.UTF_8));
         hash = new StringBuilder();

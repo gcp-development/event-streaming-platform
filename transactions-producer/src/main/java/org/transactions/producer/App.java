@@ -32,7 +32,7 @@ public class App {
             pro.setProperty(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, KafkaJsonSchemaSerializer.class.getName());
             pro.setProperty(KafkaJsonSchemaSerializerConfig.SCHEMA_REGISTRY_URL_CONFIG, SCHEMA_REGISTRY);
 
-            for (int i = 1; i <= 10; i++) {
+            for (int i = 1; i <= 15; i++) {
                 randomNum = ThreadLocalRandom.current().nextInt(MIN_RANGE, MAX_RANGE + 1);
                 tx = new Transaction(randomNum, "RECIPIENTQGefi2DMPTfTL5SLmv7DivfN" + Integer.toString(i), "SENDEReP5QGefi2DMPTfTL5SLmv7DivfN" + Integer.toString(i));
                 producer = new KafkaProducer<String, Transaction>(pro);

@@ -4,12 +4,16 @@ import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.sql.Timestamp;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonRootName;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonRootName(value = "Block")
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Block {
     @JsonProperty("Index")
     private int index;
@@ -79,13 +83,23 @@ public class Block {
         this.previousHash = previousHash;
     }
 
+    private int getSumAmount()
+    {
+        int sumAmount=0;
+
+        for (Iterator<Transaction> i = transactions.iterator(); i.hasNext();) {
+            sumAmount = sumAmount + i.next().getAmount();
+        }
+        return sumAmount;
+    }
+
     public String getHash() throws NoSuchAlgorithmException {
         String word;
         MessageDigest md;
         byte[] wordConvertToBytes;
         StringBuilder hash;
 
-        word = Integer.toString(index) + timestamp.toString() + transactions.toString() + Integer.toString(proof) + previousHash;
+        word = Integer.toString(index) + timestamp.toString() + Integer.toString(getSumAmount())+ Integer.toString(proof) + previousHash;
         md = MessageDigest.getInstance("SHA3-256");
         wordConvertToBytes = md.digest(word.getBytes(StandardCharsets.UTF_8));
         hash = new StringBuilder();

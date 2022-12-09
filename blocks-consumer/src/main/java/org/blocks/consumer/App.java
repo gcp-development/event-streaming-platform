@@ -11,6 +11,7 @@ import org.blockchain.Block;
 
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.time.Duration;
 import java.util.Collections;
 import java.util.Properties;
@@ -25,7 +26,6 @@ public class App {
         Properties pro;
         KafkaConsumer<String, Block> consumer = null;
         ConsumerRecords<String, Block> records;
-
 
         try {
             pro = new Properties();
@@ -50,12 +50,11 @@ public class App {
                     Block bk = record.value();
                     System.out.printf("%s %d %d %s \n", record.topic(), record.partition(), record.offset(), bk.toString());
                     System.out.printf("----------------------------------------------------------------------\n");
-                    byte[] result = md.digest(bk.toString().getBytes(StandardCharsets.UTF_8));
-                    StringBuilder sb = new StringBuilder();
-                    for (byte b : result) {
-                        sb.append(String.format("%02x", b));
+                    try {
+                        System.out.printf("Block Hash:%s \n", bk.getHash());
+                    } catch (NoSuchAlgorithmException e) {
+                        throw new RuntimeException(e);
                     }
-                    System.out.printf("Block Hash:%s \n", sb.toString());
                     System.out.printf("Index:%s \n", bk.getIndex());
                     System.out.printf("Timestamp:%s \n", bk.getTimestamp());
                     System.out.printf("Proof:%s \n", bk.getProof());
