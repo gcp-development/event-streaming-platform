@@ -1,2 +1,4 @@
+org/blockchain/Validator.class
 org/blockchain/Transaction.class
 org/blockchain/Block.class
+org/blockchain/ParticipantsPool.class

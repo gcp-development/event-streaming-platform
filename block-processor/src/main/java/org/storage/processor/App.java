@@ -15,10 +15,13 @@ import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.common.serialization.StringSerializer;
 import org.blockchain.Block;
+import org.blockchain.ParticipantsPool;
 import org.blockchain.Transaction;
+import org.blockchain.Validator;
 import java.sql.Timestamp;
 import java.time.Duration;
 import java.util.*;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class App {
     public static void main(String[] args) {
@@ -41,7 +44,30 @@ public class App {
         KafkaProducer<String, Block> producer = null;
         ProducerRecord<String, Block> recordBlock;
         String blockhash;
-        
+
+        //Proof of Stake Validators pool
+        final long MAX_RANGE = 2000;
+        final long MIN_RANGE = 1;
+        final long VALIDATION_FEES=7;
+        Validator vl1,vl2,vl3,vl4,vl5,blockValidator;
+        ParticipantsPool pp;
+
+        pp=new ParticipantsPool();
+
+        vl1=new Validator("Validator1","v11zP1eP5QGefi2DMPTfTL5SLmv7DivfNa",ThreadLocalRandom.current().nextLong(MIN_RANGE, MAX_RANGE + 1));
+        pp.getValidators().add(vl1);
+        vl2=new Validator("Validator1","v21zP1eP5QGefi2DMPTfTL5SLmv7DivfNa",ThreadLocalRandom.current().nextLong(MIN_RANGE, MAX_RANGE + 1));
+        pp.getValidators().add(vl2);
+        vl3=new Validator("Validator1","v31zP1eP5QGefi2DMPTfTL5SLmv7DivfNa",ThreadLocalRandom.current().nextLong(MIN_RANGE, MAX_RANGE + 1));
+        pp.getValidators().add(vl3);
+        vl4=new Validator("Validator1","v41zP1eP5QGefi2DMPTfTL5SLmv7DivfNa",ThreadLocalRandom.current().nextLong(MIN_RANGE, MAX_RANGE + 1));
+        pp.getValidators().add(vl4);
+        vl5=new Validator("Validator1","v51zP1eP5QGefi2DMPTfTL5SLmv7DivfNa",ThreadLocalRandom.current().nextLong(MIN_RANGE, MAX_RANGE + 1));
+        pp.getValidators().add(vl5);
+
+        pp.setValidateTransactionsFees(VALIDATION_FEES);
+
+
         try {
             //transactions
             pro = new Properties();
@@ -82,31 +108,44 @@ public class App {
                     txs.add(record.value());
                     System.out.printf("offset = %d, key = %s, value = %s partition= %d\n", record.offset(), record.key(), record.value(), record.partition());
                     if (txs.size() >= BLOCK_TRANSACTIONS) {
+                        //create new block
                         bk = new Block();
                         bk.setIndex(index);
                         bk.setTimestamp(new Timestamp(System.currentTimeMillis()));
                         bk.setProof(100);
                         bk.setTransactions(txs);
-                        if (index == 0)
-                            bk.setPreviousHash(blockhash);
+                        bk.setPreviousHash(blockhash);
+
+                        //Proof of Stake get the validator
+                        blockValidator=pp.getBockValidator();
+                        //Proof of Stake Validate the new block
+                        if(blockValidator.validateBlock(blockhash,bk)==true)
+                        {
+                            // Add the new block to the chain
+                            producer = new KafkaProducer<String, Block>(proBlock);
+                            recordBlock = new ProducerRecord<String, Block>(BLOCKCHAIN_TOPIC, Integer.toString(index), bk);
+                            producer.send(recordBlock, (recordMetadata, e) -> {
+                                if (e == null) {
+                                    System.out.println("New block created!");
+                                    System.out.println(recordMetadata.toString());
+                                } else {
+                                    System.out.println("Error..!!!");
+                                    e.printStackTrace();
+                                }
+                            });
+                            producer.flush();
+                            producer.close();
+                            index++;
+                            txs = new ArrayList<>();
+                            blockhash = bk.getHash();
+                        }
                         else
-                            bk.setPreviousHash(blockhash);
-                        producer = new KafkaProducer<String, Block>(proBlock);
-                        recordBlock = new ProducerRecord<String, Block>(BLOCKCHAIN_TOPIC, Integer.toString(index), bk);
-                        producer.send(recordBlock, (recordMetadata, e) -> {
-                            if (e == null) {
-                                System.out.println("New block created!");
-                                System.out.println(recordMetadata.toString());
-                            } else {
-                                System.out.println("Error..!!!");
-                                e.printStackTrace();
-                            }
-                        });
-                        producer.flush();
-                        producer.close();
-                        index++;
-                        txs = new ArrayList<>();
-                        blockhash = bk.getHash();
+                        {
+                            System.out.println("Block not added...!!!");
+                            //Validator is removed from the poll due foul play and lose all its tokens.
+                            pp.getValidators().remove(blockValidator);
+                            System.out.printf("Validator :%s removed from the pool",blockValidator.getName());
+                        }
                     }
                 }
             }

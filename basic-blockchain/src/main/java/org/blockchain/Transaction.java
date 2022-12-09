@@ -1,13 +1,11 @@
 package org.blockchain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonRootName;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import java.sql.Timestamp;
-import java.util.ArrayList;
-import java.util.List;
-
 @JsonRootName(value = "Transaction")
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Transaction {
     @JsonProperty("Amount")
     private int amount;

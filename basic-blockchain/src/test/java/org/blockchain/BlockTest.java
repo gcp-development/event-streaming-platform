@@ -11,7 +11,6 @@ import java.util.List;
 public class BlockTest extends TestCase {
     public BlockTest(String testName) {
         super(testName);
-
     }
 
     public void testGetHash() throws NoSuchAlgorithmException {
