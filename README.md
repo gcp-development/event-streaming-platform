@@ -13,7 +13,7 @@ Blockchain and Kafka are complementary, Kafka and the notion of blockchain share
 
 [Validators](https://github.com/gcp-development/event-streaming-platform/blob/main/basic-blockchain/src/main/java/org/blockchain/Validator.java)
 
-In Proof of Stake blockchains, validators are selected to produce the next block based on their stake. Although often designed with random functions to prevent a front-running consensus, a larger amount staked by a validator could give them a higher chance of producing the next block. Proposed blocks by validators are then propagated to the rest of the set, who verify and add the approved block to the blockchain. 
+In Proof of Stake blockchains, validators are selected to produce the next block based on their stake. Although often designed with [random functions](https://github.com/gcp-development/event-streaming-platform/blob/main/basic-blockchain/src/main/java/org/blockchain/ParticipantsPool.java#L53) to prevent a front-running consensus, a larger amount staked by a validator could give them a higher chance of producing the next block. Proposed blocks by validators are then propagated to the rest of the set, who verify and add the approved block to the blockchain. 
 
 Proof of Stake(PoS)
 
