@@ -57,7 +57,6 @@ public class App {
                     }
                     System.out.printf("Index:%s \n", bk.getIndex());
                     System.out.printf("Timestamp:%s \n", bk.getTimestamp());
-                    System.out.printf("Proof:%s \n", bk.getProof());
                     System.out.printf("PreviousHash:%s \n", bk.getPreviousHash());
                     System.out.printf("Tx Size:%s \n", bk.getTransactions().size());
                     System.out.printf("----------------------------------------------------------------------\n");

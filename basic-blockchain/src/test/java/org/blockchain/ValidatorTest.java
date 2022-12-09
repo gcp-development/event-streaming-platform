@@ -21,13 +21,11 @@ public class ValidatorTest extends TestCase {
         bk1 = new Block();
         bk1.setIndex(0);
         bk1.setTimestamp(new Timestamp(System.currentTimeMillis()));
-        bk1.setProof(100);
         bk1.setPreviousHash("Genesis Block");
 
         bk2 = new Block();
         bk2.setIndex(1);
         bk2.setTimestamp(new Timestamp(System.currentTimeMillis()));
-        bk2.setProof(100);
         bk2.setPreviousHash(bk1.getHash());
 
         assertEquals(true, vl.validateBlock(bk1.getHash(), bk2));

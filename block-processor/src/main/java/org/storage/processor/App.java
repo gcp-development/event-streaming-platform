@@ -112,7 +112,6 @@ public class App {
                         bk = new Block();
                         bk.setIndex(index);
                         bk.setTimestamp(new Timestamp(System.currentTimeMillis()));
-                        bk.setProof(100);
                         bk.setTransactions(txs);
                         bk.setPreviousHash(blockhash);
 
