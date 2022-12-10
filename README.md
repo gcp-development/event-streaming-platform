@@ -85,12 +85,13 @@ break.</li>
  <li>This makes very hard to change any data in blockchain.</li>
  <li>Each block contains set of transactions data that is linked in the next blocks so that anyone can trace the origin of data.</li>
 </ul>
- 
-![image](https://user-images.githubusercontent.com/76512851/206766875-be6a8c1b-f274-4aa9-8389-78747e4fe1f9.png)
 
 <hr>
+### Implementation
 
-### Consensus Mechanism
+![image](https://user-images.githubusercontent.com/76512851/206766875-be6a8c1b-f274-4aa9-8389-78747e4fe1f9.png)
+
+#### Consensus Mechanism
 
 [Validators](https://github.com/gcp-development/event-streaming-platform/blob/main/basic-blockchain/src/main/java/org/blockchain/Validator.java)
 
