@@ -44,12 +44,15 @@ A blockchain network have the following characteristics:
  <li>Robustness</li>
 </ul>
 
-No Third-Party Intermediaries
-Greater Transparency
-High Availability
-High Security
-Faster Dealings and Cost Savings
-Improved Traceability
+A blockchain network have the following benefits:
+<ul>
+ <li>No Third-Party Intermediaries</li>
+ <li>Greater Transparency</li>
+ <li>High Availability</li>
+ <li>High Security</li>
+ <li>Faster Dealings and Cost Savings</li>
+ <li>Improved Traceability</li>
+</ul>
 
 ![image](https://user-images.githubusercontent.com/76512851/206840630-235d178e-b796-456f-8ec7-d85799cff948.png)
 
@@ -59,7 +62,7 @@ Improved Traceability
 break.</li>
  <li>This makes very hard to change any data in blockchain.</li>
  <li>Each block contains set of transactions data that is linked in the next blocks so that anyone can trace the origin of data.</li>
-<ul>
+</ul>
  
 ![image](https://user-images.githubusercontent.com/76512851/206766875-be6a8c1b-f274-4aa9-8389-78747e4fe1f9.png)
 
