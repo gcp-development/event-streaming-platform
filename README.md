@@ -27,6 +27,8 @@ Apache Kafka is frequently deployed on the [Kubernetes](https://kubernetes.io/) 
 
 By integrating these technologies, this PoC creates a platform for demonstrate blockchain concepts in simple and easy way.
 
+Souce Code :<a href="https://github.com/gcp-development/event-streaming-platform/tree/main/kafka-setup" target="blank">kafka-setup</a>
+
 <hr>
 
 ### Blockchain
