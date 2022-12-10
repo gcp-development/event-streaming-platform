@@ -79,19 +79,14 @@ hash.</li>
 ![image](https://user-images.githubusercontent.com/76512851/206840630-235d178e-b796-456f-8ec7-d85799cff948.png)
 
 <ul>
- <li>Blockchain contains a list of block cryptographically connect to the previous block.</li>
+ <li>Blockchain contains a list of blocks cryptographically connect to the previous block.</li>
  <li>The blocks are connected such that if there is any change in block(n-1) the connection between the next block will
 break.</li>
  <li>This makes very hard to change any data in blockchain.</li>
  <li>Each block contains set of transactions data that is linked in the next blocks so that anyone can trace the origin of data.</li>
 </ul>
 
-<hr>
-### Implementation
-
-![image](https://user-images.githubusercontent.com/76512851/206766875-be6a8c1b-f274-4aa9-8389-78747e4fe1f9.png)
-
-#### Consensus Mechanism
+##### Consensus Mechanism
 
 [Validators](https://github.com/gcp-development/event-streaming-platform/blob/main/basic-blockchain/src/main/java/org/blockchain/Validator.java)
 
@@ -101,8 +96,20 @@ Proof of Stake(PoS)
 
 In order to participate in PoS, the [validators](https://github.com/gcp-development/event-streaming-platform/blob/main/basic-blockchain/src/main/java/org/blockchain/Validator.java) has to produce some stake. In PoS the validators are selected in terms of some [selection algorithm](https://github.com/gcp-development/event-streaming-platform/blob/main/basic-blockchain/src/main/java/org/blockchain/ParticipantsPool.java#L53) and the amount of stake locked in the network [(ParticipantsPool)](https://github.com/gcp-development/event-streaming-platform/blob/main/basic-blockchain/src/main/java/org/blockchain/ParticipantsPool.java) and only then that [selected validator](https://github.com/gcp-development/event-streaming-platform/blob/main/basic-blockchain/src/main/java/org/blockchain/ParticipantsPool.java#L53) will be allowed to add the [block](https://github.com/gcp-development/event-streaming-platform/blob/main/basic-blockchain/src/main/java/org/blockchain/Block.java). If the validator founds to be malicious, then they will lose all their stake.
 
+<hr>
 
+### Implementation
 
+![image](https://user-images.githubusercontent.com/76512851/206766875-be6a8c1b-f274-4aa9-8389-78747e4fe1f9.png)
+
+Source Code:
+<ul>
+ <li><a href="https://github.com/gcp-development/event-streaming-platform/tree/main/basic-blockchain" target="_blank">basic-blockchain</a></li>
+ <li><a href="https://github.com/gcp-development/event-streaming-platform/tree/main/transactions-producer" target="_blank">transactions-producer</a></li>
+ <li><a href="https://github.com/gcp-development/event-streaming-platform/tree/main/block-processor" target="_blank">block-processor</a></li>
+ <li><a href="https://github.com/gcp-development/event-streaming-platform/tree/main/blocks-consumer" target="_blank">blocks-consumer</a></li>
+</ul>
+ 
 <hr>
 References:<br>
 
