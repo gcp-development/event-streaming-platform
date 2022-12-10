@@ -26,7 +26,16 @@ By integrating these technologies, this PoC creates a platform for demonstrate b
 
 ### Blockchain
 
-Fundamentally, the data stored in a blockchain must have the following characteristics:
+What is Blockchain?
+<ul>
+ <li>Blockchain is a transaction record database that is distributed, permission less and maintained around the world by a
+network of nodes.</li>
+ <li>Blockchain has a distributed group of nodes that oversee the network.</li>
+ <li>Blockchain uses decentralized technologies to provide peer-to-peer, permissionless, and immutable network to store
+transactions.</li>
+</ul>
+ 
+Fundamentally, a blockchain network have the following characteristics:
 <ul>
  <li>No Central Authority</li>
  <li>Verifiability and Auditability</li>
@@ -35,7 +44,12 @@ Fundamentally, the data stored in a blockchain must have the following character
  <li>Robustness</li>
 </ul>
 
-A blockchain is a decentralized ledger of all transactions across a peer-to-peer network
+No Third-Party Intermediaries
+Greater Transparency
+High Availability
+High Security
+Faster Dealings and Cost Savings
+Improved Traceability
 
 ![image](https://user-images.githubusercontent.com/76512851/206840630-235d178e-b796-456f-8ec7-d85799cff948.png)
 
