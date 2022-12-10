@@ -58,6 +58,27 @@ A blockchain network have the following benefits:
 
 ![image](https://user-images.githubusercontent.com/76512851/206841362-e0757f53-a059-4790-a5f3-2d154e04fe34.png)
 
+<ul>
+ <li>Block version, version number of the block.</li>
+ <li>Previous block hash, the hash of the previous block.</li>
+ <li>Merkle tree root hash, Each transaction in the block is
+hashed and stored in a tree-like structure such that
+  each hash is linked to its parent.</li>
+ <li>nBits, encoding of the block target. A block will be
+valid only if the hash of its header is below the target
+value.</li>
+ <li>Nonce, a variable decided by the miner creating the
+block changed In order to get a block hash under
+target value.</li>
+ <li>Timestamp, value is a source of variation for the block
+hash.</li>
+<ul>
+ 
+Nonce:
+Merkel Tree:binary hash tree.
+Genesis block:the very first block upon which additional blocks in a blockchain are added.
+sha256:always generates a 256-character hash
+
 #### Blockchain overview
 
 ![image](https://user-images.githubusercontent.com/76512851/206840630-235d178e-b796-456f-8ec7-d85799cff948.png)
