@@ -72,12 +72,7 @@ block changed In order to get a block hash under
 target value.</li>
  <li>Timestamp, value is a source of variation for the block
 hash.</li>
-<ul>
- 
-Nonce:
-Merkel Tree:binary hash tree.
-Genesis block:the very first block upon which additional blocks in a blockchain are added.
-sha256:always generates a 256-character hash
+</ul>
 
 #### Blockchain overview
 
