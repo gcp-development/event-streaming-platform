@@ -54,8 +54,11 @@ A blockchain network have the following benefits:
  <li>Improved Traceability</li>
 </ul>
 
+#### Block overview
+
 ![image](https://user-images.githubusercontent.com/76512851/206841362-e0757f53-a059-4790-a5f3-2d154e04fe34.png)
 
+#### Blockchain overview
 
 ![image](https://user-images.githubusercontent.com/76512851/206840630-235d178e-b796-456f-8ec7-d85799cff948.png)
 
