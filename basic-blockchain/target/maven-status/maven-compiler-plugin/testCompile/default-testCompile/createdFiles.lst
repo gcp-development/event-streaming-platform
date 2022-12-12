@@ -1,0 +1,4 @@
+org/blockchain/ValidatorTest.class
+org/blockchain/TransactionTest.class
+org/blockchain/ParticipantsPoolTest.class
+org/blockchain/BlockTest.class

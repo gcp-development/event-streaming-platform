@@ -5,36 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eba02fce-ea02-4a51-a4df-cd7731ff2ca3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../basic-blockchain/target/basic-blockchain-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../basic-blockchain/target/classes/org/blockchain/Block.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../basic-blockchain/target/classes/org/blockchain/ParticipantsPool.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../basic-blockchain/target/classes/org/blockchain/Transaction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../basic-blockchain/target/classes/org/blockchain/Validator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../basic-blockchain/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../basic-blockchain/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../basic-blockchain/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../basic-blockchain/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../basic-blockchain/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../basic-blockchain/target/surefire-reports/TEST-org.blockchain.BlockTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../basic-blockchain/target/surefire-reports/TEST-org.blockchain.ParticipantsPoolTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../basic-blockchain/target/surefire-reports/TEST-org.blockchain.TransactionTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../basic-blockchain/target/surefire-reports/TEST-org.blockchain.ValidatorTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../basic-blockchain/target/surefire-reports/org.blockchain.BlockTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../basic-blockchain/target/surefire-reports/org.blockchain.ParticipantsPoolTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../basic-blockchain/target/surefire-reports/org.blockchain.TransactionTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../basic-blockchain/target/surefire-reports/org.blockchain.ValidatorTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../basic-blockchain/target/test-classes/org/blockchain/BlockTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../basic-blockchain/target/test-classes/org/blockchain/ParticipantsPoolTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../basic-blockchain/target/test-classes/org/blockchain/TransactionTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../basic-blockchain/target/test-classes/org/blockchain/ValidatorTest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/storage/processor/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/storage/processor/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/storage/processor/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/storage/processor/Blockchain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../blocks-consumer/src/main/java/org/blocks/consumer/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../blocks-consumer/src/main/java/org/blocks/consumer/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../blocks-consumer/target/classes/org/blocks/consumer/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../blocks-consumer/target/test-classes/org/example/AppTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../transactions-producer/target/classes/org/transactions/producer/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/../transactions-producer/target/classes/org/transactions/producer/App.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +46,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.google.cloudcode.ide_session_index": "20221212_0002",
+    "com.google.cloudcode.ide_session_index": "20221212_0003",
     "last_opened_file_path": "/home/silveira/Desktop/k8_projects/event-streaming-platform/blocks-consumer",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.0",

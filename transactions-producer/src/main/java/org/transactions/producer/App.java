@@ -9,7 +9,6 @@ import org.apache.kafka.common.serialization.StringSerializer;
 import org.blockchain.Transaction;
 import java.util.Properties;
 import java.util.concurrent.ThreadLocalRandom;
-
 public class App {
 
     public static void main(String[] args) {
