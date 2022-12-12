@@ -8,8 +8,6 @@ import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.blockchain.Block;
-
-import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.time.Duration;
@@ -41,7 +39,7 @@ public class App {
             consumer = new KafkaConsumer<String, Block>(pro);
             consumer.subscribe(Collections.singletonList(TOPIC_NAME));
             System.out.println("Listening...");
-            consumer.poll(0);
+            consumer.poll(Duration.ofMillis(0));
             consumer.seekToBeginning(consumer.assignment());
             MessageDigest md = MessageDigest.getInstance("SHA3-256");
             while (true) {
@@ -55,7 +53,7 @@ public class App {
                     } catch (NoSuchAlgorithmException e) {
                         throw new RuntimeException(e);
                     }
-                    System.out.printf("Index:%s \n", bk.getIndex());
+                    System.out.printf("Nonce:%s \n", bk.getNonce());
                     System.out.printf("Timestamp:%s \n", bk.getTimestamp());
                     System.out.printf("PreviousHash:%s \n", bk.getPreviousHash());
                     System.out.printf("Tx Size:%s \n", bk.getTransactions().size());

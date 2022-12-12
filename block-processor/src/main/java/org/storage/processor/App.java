@@ -31,6 +31,18 @@ public class App {
         final String BLOCKCHAIN_TOPIC = "blockchain";
         final String SCHEMA_REGISTRY = "http://schema-registry:8081";
         final int BLOCK_TRANSACTIONS = 3;
+        //Network Validators
+        final String VALIDATOR1_NAME = "Validator1";
+        final String VALIDATOR1_ADDRESS = "v11zP1eP5QGefi2DMPTfTL5SLmv7DivfNa";
+        final String VALIDATOR2_NAME = "Validator2";
+        final String VALIDATOR2_ADDRESS = "v21zP1eP5QGefi2DMPTfTL5SLmv7DivfNa";
+        final String VALIDATOR3_NAME = "Validator3";
+        final String VALIDATOR3_ADDRESS = "v31zP1eP5QGefi2DMPTfTL5SLmv7DivfNa";
+        final String VALIDATOR4_NAME = "Validator4";
+        final String VALIDATOR4_ADDRESS = "v41zP1eP5QGefi2DMPTfTL5SLmv7DivfNa";
+        final String VALIDATOR5_NAME = "Validator5";
+        final String VALIDATOR5_ADDRESS = "v51zP1eP5QGefi2DMPTfTL5SLmv7DivfNa";
+
         //transactions
         Properties pro;
         KafkaConsumer<String, Transaction> consumer = null;
@@ -48,23 +60,22 @@ public class App {
         //Proof of Stake Validators pool
         final long MAX_RANGE = 2000;
         final long MIN_RANGE = 1;
-        final long VALIDATION_FEES=7;
-        Validator vl1,vl2,vl3,vl4,vl5,blockValidator;
+        final long VALIDATION_FEES = 7;
+        Validator vl1, vl2, vl3, vl4, vl5, blockValidator;
         ParticipantsPool pp;
 
-        pp=new ParticipantsPool();
 
-        vl1=new Validator("Validator1","v11zP1eP5QGefi2DMPTfTL5SLmv7DivfNa",ThreadLocalRandom.current().nextLong(MIN_RANGE, MAX_RANGE + 1));
+        pp = new ParticipantsPool();
+        vl1 = new Validator(VALIDATOR1_NAME, VALIDATOR1_ADDRESS, ThreadLocalRandom.current().nextLong(MIN_RANGE, MAX_RANGE + 1));
         pp.getValidators().add(vl1);
-        vl2=new Validator("Validator1","v21zP1eP5QGefi2DMPTfTL5SLmv7DivfNa",ThreadLocalRandom.current().nextLong(MIN_RANGE, MAX_RANGE + 1));
+        vl2 = new Validator(VALIDATOR2_NAME, VALIDATOR2_ADDRESS, ThreadLocalRandom.current().nextLong(MIN_RANGE, MAX_RANGE + 1));
         pp.getValidators().add(vl2);
-        vl3=new Validator("Validator1","v31zP1eP5QGefi2DMPTfTL5SLmv7DivfNa",ThreadLocalRandom.current().nextLong(MIN_RANGE, MAX_RANGE + 1));
+        vl3 = new Validator(VALIDATOR3_NAME, VALIDATOR3_ADDRESS, ThreadLocalRandom.current().nextLong(MIN_RANGE, MAX_RANGE + 1));
         pp.getValidators().add(vl3);
-        vl4=new Validator("Validator1","v41zP1eP5QGefi2DMPTfTL5SLmv7DivfNa",ThreadLocalRandom.current().nextLong(MIN_RANGE, MAX_RANGE + 1));
+        vl4 = new Validator(VALIDATOR4_NAME, VALIDATOR4_ADDRESS, ThreadLocalRandom.current().nextLong(MIN_RANGE, MAX_RANGE + 1));
         pp.getValidators().add(vl4);
-        vl5=new Validator("Validator1","v51zP1eP5QGefi2DMPTfTL5SLmv7DivfNa",ThreadLocalRandom.current().nextLong(MIN_RANGE, MAX_RANGE + 1));
+        vl5 = new Validator(VALIDATOR5_NAME, VALIDATOR5_ADDRESS, ThreadLocalRandom.current().nextLong(MIN_RANGE, MAX_RANGE + 1));
         pp.getValidators().add(vl5);
-
         pp.setValidateTransactionsFees(VALIDATION_FEES);
 
 
@@ -92,7 +103,7 @@ public class App {
             consumer = new KafkaConsumer<String, Transaction>(pro);
             consumer.subscribe(Collections.singletonList(TRANSACTIONS_TOPIC));
             System.out.println("Listening for transactions...");
-            consumer.poll(0);
+            consumer.poll(Duration.ofMillis(0));
             consumer.seekToBeginning(consumer.assignment());
             //consumer.seekToEnd(Collections.singletonList(tp));
             //consumer.commitSync() ;
@@ -110,16 +121,15 @@ public class App {
                     if (txs.size() >= BLOCK_TRANSACTIONS) {
                         //create new block
                         bk = new Block();
-                        bk.setIndex(index);
+                        bk.setNonce(index);
                         bk.setTimestamp(new Timestamp(System.currentTimeMillis()));
                         bk.setTransactions(txs);
                         bk.setPreviousHash(blockhash);
 
                         //Proof of Stake get the validator
-                        blockValidator=pp.getBockValidator();
+                        blockValidator = pp.getBlockValidator();
                         //Proof of Stake Validate the new block
-                        if(blockValidator.validateBlock(blockhash,bk)==true)
-                        {
+                        if (blockValidator.validateBlock(blockhash, bk) == true) {
                             // Add the new block to the chain
                             producer = new KafkaProducer<String, Block>(proBlock);
                             recordBlock = new ProducerRecord<String, Block>(BLOCKCHAIN_TOPIC, Integer.toString(index), bk);
@@ -137,13 +147,11 @@ public class App {
                             index++;
                             txs = new ArrayList<>();
                             blockhash = bk.getHash();
-                        }
-                        else
-                        {
+                        } else {
                             System.out.println("Block not added...!!!");
                             //Validator is removed from the poll due foul play and lose all its tokens.
                             pp.getValidators().remove(blockValidator);
-                            System.out.printf("Validator :%s removed from the pool",blockValidator.getName());
+                            System.out.printf("Validator :%s removed from the pool", blockValidator.getName());
                         }
                     }
                 }
