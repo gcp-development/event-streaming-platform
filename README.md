@@ -21,10 +21,6 @@ Blockchain and Kafka are complementary, Kafka and the notion of blockchain share
   <li><a href="https://github.com/gcp-development/event-streaming-platform#block-processor" target="blank">Block Processor</a></li>
   <li><a href="https://github.com/gcp-development/event-streaming-platform#transactions-producer" target="blank">Transactions Producer</a></li>
  </ul>
- 
- 
- 
- 
 </ul>
 <hr>
 
@@ -121,20 +117,21 @@ In order to participate in PoS, the [validators](https://github.com/gcp-developm
 
 ![image](https://user-images.githubusercontent.com/76512851/206766875-be6a8c1b-f274-4aa9-8389-78747e4fe1f9.png)
 
-#### Blocks Consumer
+Transactions Producer
 
-This [Java project](https://github.com/gcp-development/event-streaming-platform/tree/main/blocks-consumer) will start the listener for the topic blockchain in kafka.
+This [Java project](https://github.com/gcp-development/event-streaming-platform/tree/main/transactions-producer) will create the transactions for our basic blockchain.
 
-#### Block Processor
+Block Processor
 
-This [Java project](https://github.com/gcp-development/event-streaming-platform/tree/main/blocks-consumer) will start the listener for the topic transactions in kafka and insert the new blocks into the the topic blockchain in kafka.
+This [Java project](https://github.com/gcp-development/event-streaming-platform/tree/main/blocks-consumer) will process the transactions and create the new blocks for our basic blockchain.
 
-#### Transactions Producer
+Blocks Consumer
 
-This [Java project](https://github.com/gcp-development/event-streaming-platform/tree/main/transactions-producer) will insert 15 random transactions into the transactions topic in Kafka.
+This [Java project](https://github.com/gcp-development/event-streaming-platform/tree/main/blocks-consumer) will consume the blocks.
 
-![image](https://user-images.githubusercontent.com/76512851/207057282-e3264dba-e072-43bc-9c8b-5d5cbfe684a3.png)
+Basic Blockchain
 
+This [Java project](https://github.com/gcp-development/event-streaming-platform/tree/main/basic-blockchain) this library(JAR) contains the objects that form a basic blockchain.
 
 
 Source Code:
