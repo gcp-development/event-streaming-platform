@@ -50,7 +50,7 @@ public class ParticipantsPool {
         return sumTokens;
     }
 
-    public Validator getBockValidator() {
+    public Validator getBlockValidator() {
         Validator validator= null, item ;
         long randomNumber;
 

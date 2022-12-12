@@ -1,21 +1,26 @@
 package org.blockchain;
 
-import junit.framework.Test;
 import junit.framework.TestCase;
-import junit.framework.TestSuite;
 
 public class TransactionTest extends TestCase {
 
-    public TransactionTest( String testName )
-    {
-        super( testName );
+    public TransactionTest(String testName) {
+        super(testName);
     }
-    public static Test suite()
-    {
-        return new TestSuite( TransactionTest.class );
-    }
-    public void testApp()
-    {
-        assertTrue( true );
+
+    public void testTransaction() {
+        final long AMOUNT = 100;
+        final String RECIPIENT = "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa";
+        final String SENDER = "4A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa";
+        Transaction tx;
+
+        tx = new Transaction();
+        tx.setAmount(AMOUNT);
+        tx.setRecipient(RECIPIENT);
+        tx.setSender(SENDER);
+
+        assertEquals(AMOUNT, tx.getAmount());
+        assertEquals(RECIPIENT, tx.getRecipient());
+        assertEquals(SENDER, tx.getSender());
     }
 }

@@ -19,12 +19,12 @@ public class ValidatorTest extends TestCase {
 
         vl = new Validator("Validator1", "", 100);
         bk1 = new Block();
-        bk1.setIndex(0);
+        bk1.setNonce(0);
         bk1.setTimestamp(new Timestamp(System.currentTimeMillis()));
         bk1.setPreviousHash("Genesis Block");
 
         bk2 = new Block();
-        bk2.setIndex(1);
+        bk2.setNonce(1);
         bk2.setTimestamp(new Timestamp(System.currentTimeMillis()));
         bk2.setPreviousHash(bk1.getHash());
 

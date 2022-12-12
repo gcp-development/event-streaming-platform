@@ -15,7 +15,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Block {
     @JsonProperty("Index")
-    private int index;
+    private int nonce;
     @JsonProperty("Timestamp")
     private Timestamp timestamp;
     @JsonProperty("Transactions")
@@ -24,25 +24,25 @@ public class Block {
     private String previousHash;
 
     public Block() {
-        this.index = -1;
+        this.nonce = -1;
         this.timestamp = new Timestamp(System.currentTimeMillis());
         this.transactions = new ArrayList<Transaction>();
         this.previousHash = new String();
     }
 
-    public Block(int index, Timestamp timestamp, List<Transaction> transactions, String previousHash) {
-        this.index = index;
+    public Block(int nonce, Timestamp timestamp, List<Transaction> transactions, String previousHash) {
+        this.nonce = nonce;
         this.timestamp = timestamp;
         this.transactions = transactions;
         this.previousHash = previousHash;
     }
 
-    public int getIndex() {
-        return index;
+    public int getNonce() {
+        return nonce;
     }
 
-    public void setIndex(int index) {
-        this.index = index;
+    public void setNonce(int nonce) {
+        this.nonce = nonce;
     }
 
     public Timestamp getTimestamp() {
@@ -69,8 +69,8 @@ public class Block {
         this.previousHash = previousHash;
     }
 
-    private int getSumAmount() {
-        int sumAmount = 0;
+    private long getSumAmount() {
+        long sumAmount = 0;
 
         for (Iterator<Transaction> i = transactions.iterator(); i.hasNext(); ) {
             sumAmount = sumAmount + i.next().getAmount();
@@ -84,7 +84,7 @@ public class Block {
         byte[] wordConvertToBytes;
         StringBuilder hash;
 
-        word = Integer.toString(index) + timestamp.toString() + Integer.toString(getSumAmount()) + previousHash;
+        word = Integer.toString(nonce) + timestamp.toString() + Long.toString(getSumAmount()) + previousHash;
         md = MessageDigest.getInstance("SHA3-256");
         wordConvertToBytes = md.digest(word.getBytes(StandardCharsets.UTF_8));
         hash = new StringBuilder();

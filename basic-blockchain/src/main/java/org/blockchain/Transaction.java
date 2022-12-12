@@ -8,7 +8,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Transaction {
     @JsonProperty("Amount")
-    private int amount;
+    private long amount;
     @JsonProperty("Recipient")
     private String recipient;
     @JsonProperty("Sender")
@@ -20,17 +20,17 @@ public class Transaction {
         this.sender = new String();
     }
 
-    public Transaction(int amount, String recipient, String sender) {
+    public Transaction(long amount, String recipient, String sender) {
         this.amount = amount;
         this.recipient = recipient;
         this.sender = sender;
     }
 
-    public int getAmount() {
+    public long getAmount() {
         return amount;
     }
 
-    public void setAmount(int amount) {
+    public void setAmount(long amount) {
         this.amount = amount;
     }
 
