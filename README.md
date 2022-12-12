@@ -17,9 +17,9 @@ Blockchain and Kafka are complementary, Kafka and the notion of blockchain share
 </ul>
 <li> <a href="https://github.com/gcp-development/event-streaming-platform#implementation" target="_blank">Implementation</a></li>
  <ul>
-  <li><a href="https://github.com/gcp-development/event-streaming-platform#blocks-consumer" target="blank">1) Run the blocks-consumer</a></li>
-  <li><a href="https://github.com/gcp-development/event-streaming-platform#block-processor" target="blank">2) Run the block-processor</a></li>
-  <li><a href="https://github.com/gcp-development/event-streaming-platform#transactions-producer" target="blank">3) Run the transactions-producer</a></li>
+  <li><a href="https://github.com/gcp-development/event-streaming-platform#1-run-the-blocks-consumer" target="blank">1) Run the blocks-consumer</a></li>
+  <li><a href="https://github.com/gcp-development/event-streaming-platform#2-run-the-block-processor" target="blank">2) Run the block-processor</a></li>
+  <li><a href="https://github.com/gcp-development/event-streaming-platform#3-run-the-transactions-producer" target="blank">3) Run the transactions-producer</a></li>
  </ul>
 </ul>
 <hr>
@@ -133,11 +133,11 @@ Basic Blockchain
 
 This [Java project](https://github.com/gcp-development/event-streaming-platform/tree/main/basic-blockchain) this library(JAR) contains the objects that form a basic blockchain.
 
-#### 1) Run the blocks-consumer
+##### 1) Run the blocks-consumer
 
-#### 2) Run the block-processor
+##### 2) Run the block-processor
 
-#### 3) Run the transactions-producer
+##### 3) Run the transactions-producer
 
 Source Code:
 <ul>
