@@ -103,7 +103,7 @@ public class App {
             consumer = new KafkaConsumer<String, Transaction>(pro);
             consumer.subscribe(Collections.singletonList(TRANSACTIONS_TOPIC));
             System.out.println("Listening for transactions...");
-            consumer.poll(Duration.ofMillis(0));
+            consumer.poll(0);
             consumer.seekToBeginning(consumer.assignment());
             //consumer.seekToEnd(Collections.singletonList(tp));
             //consumer.commitSync() ;
@@ -116,6 +116,7 @@ public class App {
                 records = consumer.poll(Duration.ofMillis(100));
                 txs = new ArrayList<>();
                 for (ConsumerRecord<String, Transaction> record : records) {
+                    System.out.printf("----------------------------------------------------------------------\n");
                     txs.add(record.value());
                     System.out.printf("offset = %d, key = %s, value = %s partition= %d\n", record.offset(), record.key(), record.value(), record.partition());
                     if (txs.size() >= BLOCK_TRANSACTIONS) {
@@ -135,10 +136,10 @@ public class App {
                             recordBlock = new ProducerRecord<String, Block>(BLOCKCHAIN_TOPIC, Integer.toString(index), bk);
                             producer.send(recordBlock, (recordMetadata, e) -> {
                                 if (e == null) {
-                                    System.out.println("New block created!");
+                                    System.out.println("--->New block created!<---");
                                     System.out.println(recordMetadata.toString());
                                 } else {
-                                    System.out.println("Error..!!!");
+                                    System.out.println("--->Error..!!!<---");
                                     e.printStackTrace();
                                 }
                             });
@@ -148,12 +149,13 @@ public class App {
                             txs = new ArrayList<>();
                             blockhash = bk.getHash();
                         } else {
-                            System.out.println("Block not added...!!!");
+                            System.out.println("--->Block not added...!!!<---");
                             //Validator is removed from the poll due foul play and lose all its tokens.
                             pp.getValidators().remove(blockValidator);
                             System.out.printf("Validator :%s removed from the pool", blockValidator.getName());
                         }
                     }
+                    System.out.printf("----------------------------------------------------------------------\n");
                 }
             }
         } catch (Exception e) {

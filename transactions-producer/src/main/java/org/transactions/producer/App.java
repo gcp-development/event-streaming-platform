@@ -30,20 +30,24 @@ public class App {
             pro.setProperty(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
             pro.setProperty(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, KafkaJsonSchemaSerializer.class.getName());
             pro.setProperty(KafkaJsonSchemaSerializerConfig.SCHEMA_REGISTRY_URL_CONFIG, SCHEMA_REGISTRY);
-
-            for (int i = 1; i <= 15; i++) {
+            System.out.printf("\n\n");
+            for (int i = 0; i < 15; i++) {
                 randomNum = ThreadLocalRandom.current().nextInt(MIN_RANGE, MAX_RANGE + 1);
                 tx = new Transaction(randomNum, "RECIPIENTQGefi2DMPTfTL5SLmv7DivfN" + Integer.toString(i), "SENDEReP5QGefi2DMPTfTL5SLmv7DivfN" + Integer.toString(i));
                 producer = new KafkaProducer<String, Transaction>(pro);
                 record = new ProducerRecord<String, Transaction>(TOPIC_NAME, Integer.toString(i), tx);
+                System.out.printf("Amount = %d, Recipient = %s, Sender= %s \n", tx.getAmount(), tx.getRecipient(), tx.getSender());
                 producer.send(record, (recordMetadata, e) -> {
+                    System.out.printf("----------------------------------------------------------------------\n");
                     if (e == null) {
-                        System.out.println("Success!");
-                        System.out.println(recordMetadata.toString());
+                        System.out.println("Success...Transaction inserted!");
+                        System.out.println();
+                        System.out.printf("Topic:%s Partition:%d Offset:%d\n", recordMetadata.topic(), recordMetadata.partition(), recordMetadata.offset());
                     } else {
-                        System.out.println("Error..!!!");
+                        System.out.println("Error...Transaction not inserted!");
                         e.printStackTrace();
                     }
+                    System.out.printf("----------------------------------------------------------------------\n");
                 });
                 producer.flush();
                 producer.close();
