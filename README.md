@@ -177,6 +177,10 @@ The run windows should look like this.
 
 ![image](https://user-images.githubusercontent.com/76512851/207292859-50ea15d0-22a1-4a8a-8670-714c608aa0a0.png)
 
+The Blockchain created.
+
+![image](https://user-images.githubusercontent.com/76512851/207296591-3aa7938d-afbe-4610-bf89-dbd330925003.png)
+
 Source Code:
 <ul>
  <li><a href="https://github.com/gcp-development/event-streaming-platform/tree/main/basic-blockchain" target="_blank">basic-blockchain</a></li>
@@ -184,7 +188,6 @@ Source Code:
  <li><a href="https://github.com/gcp-development/event-streaming-platform/tree/main/block-processor" target="_blank">block-processor</a></li>
  <li><a href="https://github.com/gcp-development/event-streaming-platform/tree/main/blocks-consumer" target="_blank">blocks-consumer</a></li>
 </ul>
-
 
 <hr>
 References:<br>
