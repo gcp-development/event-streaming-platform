@@ -135,6 +135,8 @@ This [Java project](https://github.com/gcp-development/event-streaming-platform/
 
 ##### 1) Run the blocks-consumer
 
+As a prerequisite the [basic-blockchain project](https://github.com/gcp-development/event-streaming-platform/tree/main/basic-blockchain) needs to create the JAR which the other projects will use.
+
 Open the [blocks-consumer project](https://github.com/gcp-development/event-streaming-platform/tree/main/blocks-consumer) with [Intellij community](https://www.jetbrains.com/idea/download/#section=linux) and run the project.
 
 The listener will subscribe to the blockchain topic to consume any message saved there.
