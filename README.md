@@ -1,4 +1,4 @@
-# Event Streaming Platform (----->Work in progress<-----)
+# Event Streaming Platform
 
 ## Motivation
 
@@ -119,19 +119,19 @@ In order to participate in PoS, the [validators](https://github.com/gcp-developm
 
 Transactions Producer
 
-This [Java project](https://github.com/gcp-development/event-streaming-platform/tree/main/transactions-producer) will create the transactions for our basic blockchain.
+->This [Java project](https://github.com/gcp-development/event-streaming-platform/tree/main/transactions-producer) will create the transactions for our basic blockchain.
 
 Block Processor
 
-This [Java project](https://github.com/gcp-development/event-streaming-platform/tree/main/blocks-consumer) will process the transactions and create the new blocks for our basic blockchain.
+->This [Java project](https://github.com/gcp-development/event-streaming-platform/tree/main/blocks-consumer) will process the transactions and create the new blocks for our basic blockchain.
 
 Blocks Consumer
 
-This [Java project](https://github.com/gcp-development/event-streaming-platform/tree/main/blocks-consumer) will consume the blocks.
+->This [Java project](https://github.com/gcp-development/event-streaming-platform/tree/main/blocks-consumer) will consume the blocks.
 
 Basic Blockchain
 
-This [Java project](https://github.com/gcp-development/event-streaming-platform/tree/main/basic-blockchain) this library(JAR) contains the objects that form a basic blockchain.
+->This [Java project](https://github.com/gcp-development/event-streaming-platform/tree/main/basic-blockchain) this library(JAR) contains the objects that form a basic blockchain.
 
 ##### 1) Run the blocks-consumer
 
