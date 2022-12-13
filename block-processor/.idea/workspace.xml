@@ -5,15 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eba02fce-ea02-4a51-a4df-cd7731ff2ca3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../basic-blockchain/target/surefire-reports/TEST-org.blockchain.BlockTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../basic-blockchain/target/surefire-reports/TEST-org.blockchain.BlockTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic-blockchain/target/surefire-reports/TEST-org.blockchain.ParticipantsPoolTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../basic-blockchain/target/surefire-reports/TEST-org.blockchain.ParticipantsPoolTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic-blockchain/target/surefire-reports/TEST-org.blockchain.ValidatorTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../basic-blockchain/target/surefire-reports/TEST-org.blockchain.ValidatorTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic-blockchain/target/surefire-reports/org.blockchain.BlockTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../basic-blockchain/target/surefire-reports/org.blockchain.BlockTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic-blockchain/target/surefire-reports/org.blockchain.ParticipantsPoolTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../basic-blockchain/target/surefire-reports/org.blockchain.ParticipantsPoolTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic-blockchain/target/surefire-reports/org.blockchain.ValidatorTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../basic-blockchain/target/surefire-reports/org.blockchain.ValidatorTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/storage/processor/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/storage/processor/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/storage/processor/Blockchain.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../blocks-consumer/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../blocks-consumer/src/main/resources/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../blocks-consumer/src/test/java/org/example/AppTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../transactions-producer/src/main/java/org/transactions/producer/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../transactions-producer/src/main/java/org/transactions/producer/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../transactions-producer/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../transactions-producer/src/main/resources/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../transactions-producer/src/test/java/org/transactions/producer/AppTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,8 +52,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.google.cloudcode.ide_session_index": "20221212_0013",
-    "last_opened_file_path": "/home/silveira/Desktop/k8_projects/event-streaming-platform/blocks-consumer",
+    "com.google.cloudcode.ide_session_index": "20221213_0004",
+    "last_opened_file_path": "/home/silveira/Desktop/k8_projects/event-streaming-platform/transactions-producer",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"
