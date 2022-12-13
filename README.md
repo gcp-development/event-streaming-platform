@@ -169,11 +169,13 @@ The [transactions-producer project](https://github.com/gcp-development/event-str
 
 The run windows should look like this.
 
-![image](https://user-images.githubusercontent.com/76512851/207292859-50ea15d0-22a1-4a8a-8670-714c608aa0a0.png)
+![image](https://user-images.githubusercontent.com/76512851/207294741-7f515a90-8667-4f2d-8bfe-9dce451c392a.png)
 
 The [blocks-consumer project](https://github.com/gcp-development/event-streaming-platform/tree/main/blocks-consumer) is subscribed to the blockchain topic which will read any message insert into the blockchain topic.
 
 The run windows should look like this.
+
+![image](https://user-images.githubusercontent.com/76512851/207292859-50ea15d0-22a1-4a8a-8670-714c608aa0a0.png)
 
 Source Code:
 <ul>
