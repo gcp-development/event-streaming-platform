@@ -1,4 +1,4 @@
-# Event Streaming Platform
+# Event Streaming Platform (Blockchain)
 
 ## Motivation
 
